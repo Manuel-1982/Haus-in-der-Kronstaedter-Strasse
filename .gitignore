@@ -1,0 +1,9 @@
+# Ignore local workspace scratch files and scripts, keep only the clean website & Excel for GitHub Pages
+*
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/Vergleichshaus Oma.xlsx
+!/web_images/
+!/web_images/*.jpg

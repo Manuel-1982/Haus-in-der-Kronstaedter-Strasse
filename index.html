@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Kronstädter Straße 29 – Wertermittlung & Immobilienvergleich (Reutlingen)</title>
+  <style>
+    :root {
+      --navy: #0f172a;
+      --navy-mid: #1e293b;
+      --blue: #0284c7;
+      --blue-light: #e0f2fe;
+      --gold-dark: #78350f;
+      --gold-mid: #b45309;
+      --gold-bg: #fef3c7;
+      --gold-border: #f59e0b;
+      --green-dark: #065f46;
+      --green-mid: #047857;
+      --green-bg: #ecfdf5;
+      --green-border: #34d399;
+      --amber-dark: #92400e;
+      --amber-bg: #fffbeb;
+      --amber-border: #fbbf24;
+      --red-dark: #991b1b;
+      --red-bg: #fef2f2;
+      --red-border: #f87171;
+      --gray-bg: #f1f5f9;
+      --gray-text: #475569;
+      --border: #e2e8f0;
+      --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 60px;
+    }
+
+    /* TOP STICKY HEADER */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 16px;
+    }
+    .top-nav-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 4px 9px;
+      border-radius: 8px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+    .brand-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+    }
+    .brand-sub {
+      font-size: 0.76rem;
+      color: #94a3b8;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      max-width: 100%;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+    .nav-btn {
+      background: rgba(255,255,255,0.1);
+      color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: #f59e0b;
+      color: #0f172a;
+      border-color: #f59e0b;
+    }
+    .nav-btn-excel {
+      background: #059669;
+      color: #fff;
+      border-color: #10b981;
+    }
+    .nav-btn-excel:hover {
+      background: #10b981;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    /* SECTION HEADINGS */
+    .section-header {
+      margin-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    /* OMA HOUSE HERO BENCHMARK CARD */
+    .oma-hero {
+      background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 100%);
+      border: 2px solid var(--gold-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 10px 30px -5px rgba(180, 83, 9, 0.15);
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .oma-hero-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      border-bottom: 1px solid rgba(180, 83, 9, 0.2);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+    .oma-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+    .badge-gold {
+      background: #78350f;
+      color: #fef3c7;
+    }
+    .badge-green {
+      background: #065f46;
+      color: #ecfdf5;
+    }
+    .badge-blue {
+      background: #0369a1;
+      color: #e0f2fe;
+    }
+    .oma-main-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #78350f;
+      line-height: 1.25;
+    }
+    .oma-address {
+      font-size: 0.95rem;
+      color: #92400e;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .oma-price-highlight {
+      background: #fff;
+      border: 2px solid #d97706;
+      border-radius: 14px;
+      padding: 14px 20px;
+      text-align: right;
+      min-width: 250px;
+      box-shadow: 0 4px 12px rgba(180,83,9,0.1);
+    }
+    @media (max-width: 640px) {
+      .oma-price-highlight {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .oma-price-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #92400e;
+      font-weight: 700;
+    }
+    .oma-price-val {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #047857;
+      line-height: 1.15;
+    }
+    .oma-price-sub {
+      font-size: 0.8rem;
+      color: #475569;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* OMA DETAILS GRID */
+    .oma-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 14px;
+    }
+    .oma-box {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(217, 119, 6, 0.25);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .oma-box-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #78350f;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .oma-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: #1e293b;
+    }
+    .oma-list li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .oma-list li strong {
+      color: #0f172a;
+    }
+
+    /* 3-TIER PRICE STRATEGY CARDS */
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .tier-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .tier-card.tier-low {
+      border-top: 5px solid #f59e0b;
+    }
+    .tier-card.tier-mid {
+      border: 2px solid #059669;
+      border-top: 6px solid #059669;
+      background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 35%);
+      transform: translateY(-2px);
+    }
+    .tier-card.tier-high {
+      border-top: 5px solid #0284c7;
+    }
+    .tier-tag {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+    .tier-low .tier-tag { background: #fef3c7; color: #92400e; }
+    .tier-mid .tier-tag { background: #059669; color: #fff; }
+    .tier-high .tier-tag { background: #e0f2fe; color: #0369a1; }
+    .tier-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .tier-price {
+      font-size: 1.6rem;
+      font-weight: 900;
+      margin: 8px 0 4px 0;
+    }
+    .tier-low .tier-price { color: #b45309; }
+    .tier-mid .tier-price { color: #047857; }
+    .tier-high .tier-price { color: #0369a1; }
+    .tier-qm {
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+    .tier-desc {
+      font-size: 0.86rem;
+      color: #334155;
+      margin-bottom: 12px;
+    }
+    .tier-refs {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.8rem;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* INTERACTIVE SIMULATOR / CALCULATOR */
+    .calc-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 32px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .slider-group {
+      margin-bottom: 16px;
+    }
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #1e293b;
+    }
+    .slider-val {
+      color: var(--blue);
+      font-weight: 800;
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: #0284c7;
+      height: 6px;
+      cursor: pointer;
+    }
+    .calc-output {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .calc-out-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 8px;
+    }
+    .calc-out-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .calc-big {
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: #34d399;
+    }
+    .calc-vb {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fbbf24;
+    }
+
+    /* FILTER & VIEW CONTROLS BAR */
+    .controls-bar {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .controls-row-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    @media (max-width: 640px) {
+      .filter-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        max-width: 100%;
+      }
+    }
+    .f-pill {
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      color: #334155;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .f-pill:hover {
+      border-color: #94a3b8;
+      background: #f1f5f9;
+    }
+    .f-pill.active {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media (min-width: 768px) {
+      .controls-right {
+        width: auto;
+      }
+    }
+    .search-input, .sort-select {
+      padding: 8px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      background: #fff;
+      color: #0f172a;
+    }
+    .search-input {
+      min-width: 210px;
+      flex: 1;
+    }
+    .view-toggle {
+      display: inline-flex;
+      background: #f1f5f9;
+      padding: 3px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+    }
+    .view-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #475569;
+      cursor: pointer;
+    }
+    .view-btn.active {
+      background: #fff;
+      color: var(--navy);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* CARDS GRID (MOBILE & PC) */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    @media (max-width: 420px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .prop-card {
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .prop-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.14);
+    }
+    .prop-media {
+      position: relative;
+      height: 225px;
+      background: #0f172a;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .prop-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .prop-card:hover .prop-media img {
+      transform: scale(1.03);
+    }
+    .media-id-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(15, 23, 42, 0.88);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+    }
+    .media-photo-count {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 5px 10px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      backdrop-filter: blur(4px);
+    }
+    .media-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(15, 23, 42, 0.7);
+      color: #fff;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+    .media-nav-btn:hover {
+      background: rgba(15, 23, 42, 0.95);
+    }
+    .media-nav-prev { left: 8px; }
+    .media-nav-next { right: 8px; }
+
+    /* THUMB STRIP UNDER MAIN PHOTO */
+    .thumb-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4px;
+      padding: 6px 12px 0 12px;
+      background: #f8fafc;
+    }
+    .thumb-mini {
+      height: 44px;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.75;
+    }
+    .thumb-mini.active, .thumb-mini:hover {
+      border-color: var(--blue);
+      opacity: 1;
+    }
+    .thumb-mini img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .prop-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+    .gwg-banner {
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .c-green { background: var(--green-bg); color: var(--green-dark); border: 1px solid var(--green-border); }
+    .c-blue { background: var(--blue-light); color: #0369a1; border: 1px solid #7dd3fc; }
+    .c-amber { background: var(--amber-bg); color: var(--amber-dark); border: 1px solid var(--amber-border); }
+    .c-red { background: var(--red-bg); color: var(--red-dark); border: 1px solid var(--red-border); }
+    .c-gray { background: var(--gray-bg); color: var(--gray-text); border: 1px solid #cbd5e1; }
+
+    .prop-title {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .prop-loc {
+      font-size: 0.82rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* KEY METRICS ROW */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      background: #f8fafc;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .m-lbl {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      color: #64748b;
+      font-weight: 700;
+    }
+    .m-val {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .m-val.price-col {
+      color: #0369a1;
+      font-size: 0.98rem;
+    }
+
+    /* OMA COMPARISON DELTA BAR */
+    .delta-bar {
+      font-size: 0.76rem;
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px dashed #f59e0b;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    /* AMPEL FEATURE CHIPS */
+    .ampel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      font-size: 0.76rem;
+    }
+    .ampel-item {
+      padding: 6px 8px;
+      border-radius: 7px;
+      line-height: 1.25;
+    }
+    .ampel-item span.a-key {
+      display: block;
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      opacity: 0.8;
+      font-weight: 700;
+    }
+    .ampel-item span.a-val {
+      font-weight: 700;
+    }
+
+    .price-eval-box {
+      padding: 9px 11px;
+      border-radius: 9px;
+      font-size: 0.79rem;
+      line-height: 1.35;
+    }
+
+    .prop-footer {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-gallery {
+      background: #047857;
+      color: #fff;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn-gallery:hover {
+      background: #065f46;
+    }
+    .expose-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .btn-link {
+      background: #eff6ff;
+      color: #0284c7;
+      border: 1px solid #bae6fd;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .btn-link:hover {
+      background: #e0f2fe;
+    }
+
+    /* PC TABLE VIEW */
+    .table-wrapper {
+      display: none;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      overflow-x: auto;
+    }
+    .table-wrapper.active {
+      display: block;
+    }
+    .cards-grid.hidden {
+      display: none;
+    }
+    table.master-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.81rem;
+      min-width: 1280px;
+    }
+    table.master-table th {
+      background: var(--navy);
+      color: #fff;
+      text-align: left;
+      padding: 11px 10px;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    table.master-table td {
+      padding: 10px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+    }
+    table.master-table tr.oma-table-row td {
+      background: #fef3c7;
+      border-top: 2px solid #d97706;
+      border-bottom: 2px solid #d97706;
+      font-weight: 700;
+    }
+    table.master-table tr:hover td {
+      background: #f8fafc;
+    }
+    table.master-table tr.oma-table-row:hover td {
+      background: #fde68a;
+    }
+    .tbl-thumb {
+      width: 84px;
+      height: 58px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px solid #cbd5e1;
+    }
+    .tbl-badge {
+      display: inline-block;
+      padding: 4px 7px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    /* LIGHTBOX MODAL */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.94);
+      z-index: 1000;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+      color: #fff;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lb-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .lb-title {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+    .lb-sub {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+    .lb-close {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .lb-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      max-width: 1200px;
+      width: 100%;
+      margin: 10px auto;
+      overflow: hidden;
+    }
+    .lb-stage img {
+      max-width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .lb-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+      border: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lb-arrow:hover {
+      background: rgba(255,255,255,0.35);
+    }
+    .lb-prev { left: 10px; }
+    .lb-next { right: 10px; }
+    .lb-footer {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lb-caption {
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #e2e8f0;
+    }
+    .lb-thumbs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      justify-content: center;
+      padding-bottom: 4px;
+    }
+    @media (max-width: 640px) {
+      .lb-thumbs {
+        justify-content: flex-start;
+      }
+    }
+    .lb-thumb {
+      width: 56px;
+      height: 42px;
+      border-radius: 6px;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.5;
+      border: 2px solid transparent;
+      flex-shrink: 0;
+    }
+    .lb-thumb.active {
+      opacity: 1;
+      border-color: #f59e0b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAVIGATION -->
+  <header class="top-nav">
+    <div class="top-nav-inner">
+      <div class="brand">
+        <span class="brand-badge">⭐ FAMILIEN-PORTAL</span>
+        <div>
+          <span class="brand-title">Kronstädter Straße 29 · Reutlingen</span>
+          <span class="brand-sub">Wertermittlung & 22 Vergleichsobjekte (323 Fotos)</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#zielobjekt" class="nav-btn active">⭐ Unser Haus</a>
+        <a href="#preisspanne" class="nav-btn">💶 Preisspanne</a>
+        <a href="#rechner" class="nav-btn">🧮 Preis-Simulator</a>
+        <a href="#vergleich" class="nav-btn">🏘️ 22 Vergleichshäuser</a>
+        <a href="Vergleichshaus%20Oma.xlsx" download class="nav-btn nav-btn-excel">📥 Excel herunterladen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 1. HERO: UNSER ZIELOBJEKT (KRONSTÄDTER STRASSE 29) -->
+    <section id="zielobjekt" class="oma-hero">
+      <div class="oma-hero-top">
+        <div>
+          <div class="oma-badge-row">
+            <span class="badge-pill badge-gold">⭐ ZIELOBJEKT (FAMILIENBESITZ)</span>
+            <span class="badge-pill badge-green">GWG Reutlingen Typ IIIa (ca. 1955/1956)</span>
+            <span class="badge-pill badge-blue">Flurstück 7165 · Gemarkung 087640</span>
+          </div>
+          <h1 class="oma-main-title">Reiheneckhaus Kronstädter Straße 29</h1>
+          <p class="oma-address">📍 72760 Reutlingen – Stadtteil Römerschanze · Großes Eckgrundstück (ca. 373,71 m²)</p>
+        </div>
+        <div class="oma-price-highlight">
+          <div class="oma-price-label">Ermittelter Vergleichspreis (Richtwert)</div>
+          <div class="oma-price-val">335.000 €</div>
+          <div class="oma-price-sub">Zielkorridor: 325.000 € – 345.000 € (Ø ~3.490 €/m²)</div>
+          <div class="oma-price-sub" style="color:#b45309;">Gesamtspanne: 295.000 € (Gering) bis 375.000 € (Hoch/VB)</div>
+        </div>
+      </div>
+
+      <div class="oma-grid">
+        <div class="oma-box">
+          <div class="oma-box-title">📐 Flächen, Haustyp & Kataster</div>
+          <ul class="oma-list">
+            <li>🏠 <span><strong>Objektart:</strong> Reiheneckhaus (REH), 2 Vollgeschosse (EG + OG), voll unterkellert (UG), ausgebautes DG</span></li>
+            <li>🏗️ <span><strong>Bautyp & Baujahr:</strong> GWG-Siedlungsbau (sehr wahrsch. <strong>GWG Typ IIIa</strong>, 20. Bauprogramm, ca. <strong>1955/1956</strong>)</span></li>
+            <li>📏 <span><strong>Wohnfläche:</strong> <strong>ca. 92 – 100 m²</strong> inkl. ausgebautem DG (typischer Richtwert für GWG Typ IIIa)</span></li>
+            <li>🌳 <span><strong>Grundstück:</strong> <strong>ca. 373,71 m²</strong> großes Eckgrundstück (Kartenviewer; Flurstück 7165, Flur 0)</span></li>
+            <li>🚗 <span><strong>Parken:</strong> <strong>Eigener Parkplatz / Stellplatz</strong> direkt auf dem Grundstück vorhanden</span></li>
+          </ul>
+        </div>
+
+        <div class="oma-box">
+          <div class="oma-box-title">🚪 Raumaufteilung (UG · EG · OG · DG)</div>
+          <ul class="oma-list">
+            <li>🧱 <span><strong>Kellergeschoss (UG):</strong> Voll unterkellert; nach aktuellem Stand <strong>kein Sockelsanierungsbedarf</strong></span></li>
+            <li>🛋️ <span><strong>Erdgeschoss (EG):</strong> Eingangsflur, <strong>separates Gäste-WC</strong> (zwischen Flur & Küche), Küche, Wohn-/Essbereich</span></li>
+            <li>🛏️ <span><strong>Obergeschoss (OG):</strong> <strong>Badezimmer</strong>, 3 Zimmer (davon 1 sehr kleines Durchgangszimmer), <strong>Balkon Richtung Garten</strong></span></li>
+            <li>🪜 <span><strong>Dachgeschoss (DG):</strong> <strong>Ausgebautes Dachgeschoss</strong> (eher einfache Ausbauvariante)</span></li>
+          </ul>
+        </div>
+
+        <div class="oma-box">
+          <div class="oma-box-title">🔥 Technik & Offene Prüfpunkte</div>
+          <ul class="oma-list">
+            <li>🟢 <span><strong>Heizung (Top-Pluspunkt):</strong> Wassergeführte Gas-Zentralheizung, <strong>Gasbrenner NEU (erst ca. 2 Jahre alt!)</strong></span></li>
+            <li>🟢 <span><strong>Substanz Keller/Sockel:</strong> Solider Keller ohne den sonst bei 1950er-Bauten häufigen Sockelsanierungsbedarf</span></li>
+            <li>🟡 <span><strong>Offene Punkte (noch zu erheben):</strong> Alter und Zustand von <strong>Fenstern, Bad, Elektrik, Leitungen und Dachdämmung</strong></span></li>
+            <li>📋 <span><strong>In Klärung:</strong> Exaktes Baujahr, amtliche Katasterfläche im Grundbuch & Energieausweis</span></li>
+          </ul>
+        </div>
+
+        <div class="oma-box">
+          <div class="oma-box-title">🗺️ Bodenrichtwert (BORIS-BW 01.01.2025)</div>
+          <ul class="oma-list">
+            <li>📌 <span><strong>Zone RH Storlach (76401205):</strong> <strong>390 €/m²</strong> (Reihenhäuser, II Geschosse, GFZ 0,6; Richtwertgrundstück: <strong>180 m²</strong>)</span></li>
+            <li>🏢 <span><strong>Überlagernde Zone MFH (76401207):</strong> <strong>640 €/m²</strong> (offene Bauweise, GFZ 1,0, für Mehrfamilienhäuser ab 4 WE)</span></li>
+            <li>🧮 <span><strong>Sachverständiger Bodenwert (10%-Regel Übergröße):</strong><br>
+              • 180,00 m² Richtwertfläche × 390 €/m² = <strong>70.200 €</strong><br>
+              • 193,71 m² Mehrfläche (Gartenland 10% = 39 €/m²) = <strong>7.555 €</strong><br>
+              👉 <strong>Rechnerischer Bodenwert: ca. 77.755 €</strong> (+ hoher Marktaufschlag für 374 m² Eckgarten!)</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. DREISTUFIGE PREISSPANNE -->
+    <section id="preisspanne">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">💶 Empfohlene Preisspanne (von Gering bis Hoch)</h2>
+          <p class="section-subtitle">Abgeleitet aus den 22 realen Vergleichsobjekten unter Berücksichtigung von GWG-Typ IIIa, 373,7 m² Eckgrundstück, Stellplatz & 2 J. jungem Gasbrenner</p>
+        </div>
+      </div>
+
+      <div class="tiers-grid">
+        <div class="tier-card tier-low">
+          <div>
+            <span class="tier-tag">1. Konservative Untergrenze („Gering“)</span>
+            <h3 class="tier-title">Schneller Verkauf / Hoher Sanierungsbedarf</h3>
+            <div class="tier-price">295.000 € – 310.000 €</div>
+            <div class="tier-qm">ca. 3.070 – 3.230 €/m² (bei Ø 96 m² Wfl.)</div>
+            <p class="tier-desc">
+              Greift nur dann, wenn die offenen Gewerke (<strong>Fenster, Bad, Elektrik, Leitungen, Dachdämmung</strong>) komplett baujahrestypisch sind und vom Käufer sofort vollumfänglich saniert werden müssen.
+            </p>
+          </div>
+          <div class="tier-refs">
+            <strong>Marktbeleg nach unten:</strong> Selbst das 1956er Eckhaus <strong>ID 2</strong> (mit veralteten Gas-Einzelöfen & 258 m² Grund) liegt bei <strong>300.000 €</strong> und das kleinere 81-m²-Eckhaus <strong>ID 7</strong> (ohne Stellplatz, 180 m² Grund) bei <strong>298.000 €</strong>. Unter 295k–300k € sollte keinesfalls verkauft werden.
+          </div>
+        </div>
+
+        <div class="tier-card tier-mid">
+          <div>
+            <span class="tier-tag">★ 2. Realistischer Vergleichspreis (Richtwert) ★</span>
+            <h3 class="tier-title">Marktgerechter Zielpreis (Empfehlung)</h3>
+            <div class="tier-price">335.000 € <span style="font-size:1rem;font-weight:700;color:#065f46;">(325k – 345k €)</span></div>
+            <div class="tier-qm">ca. 3.385 – 3.595 €/m² (Richtwert: ~3.490 €/m²)</div>
+            <p class="tier-desc">
+              Der fundierteste Marktwert: Der <strong>große 374 m² Eckgarten</strong> (+200 m² mehr als Standard), der <strong>eigene Stellplatz</strong>, der <strong>Typ-IIIa-Grundriss (Bad im OG + Gäste-WC + Balkon)</strong> und der <strong>2 Jahre junge Gasbrenner</strong> gleichen den offenen Modernisierungsbedarf optimal aus.
+            </p>
+          </div>
+          <div class="tier-refs">
+            <strong>Marktbeleg im Zielkorridor:</strong> Liegt exakt zwischen <strong>ID 6</strong> (92 m² Mittelhaus Römerschanze ohne Stellplatz, 111 m² Grund: <strong>319.000 €</strong>), <strong>ID 1</strong> (kleineres 80 m² Eckhaus Römerschanze mit Carport, 168 m² Grund: <strong>339.000 €</strong>) und <strong>ID 5</strong> (baugleicher 1955er Typ IIIa, 100 m², modernisiert, aber nur 105 m² Mittelhaus: <strong>349.000 €</strong>).
+          </div>
+        </div>
+
+        <div class="tier-card tier-high">
+          <div>
+            <span class="tier-tag">3. Optimistische Obergrenze („Hoch“ / VB)</span>
+            <h3 class="tier-title">Start-Angebotspreis / Guter Zustand</h3>
+            <div class="tier-price">355.000 € – 375.000 €</div>
+            <div class="tier-qm">ca. 3.700 – 3.905 €/m² (bei Ø 96 m² Wfl.)</div>
+            <p class="tier-desc">
+              <strong>Als Verkaufspreis (355k–365k):</strong> Falls Fenster, Leitungen oder Bad bereits in gutem Zustand sind.<br>
+              <strong>Als Inserats-Startpreis (z. B. 359.000 € VB):</strong> Schafft ~20.000–25.000 € Verhandlungspuffer für eine Punktlandung bei <strong>335.000 €</strong>.
+            </p>
+          </div>
+          <div class="tier-refs">
+            <strong>Marktbeleg nach oben:</strong> Vergleichbare Eckhäuser mit großem Grundstück erzielen <strong>369.000 €</strong> (<strong>ID 9</strong>: 92 m² + Stellplatz) bis <strong>386.000 €</strong> (<strong>ID 11</strong>: BJ 1955, 101 m², 445 m² Grund). Zudem startete <strong>ID 5</strong> in der Römerschanze bei <strong>379.000 €</strong>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INTERAKTIVER PREIS-SIMULATOR -->
+    <section id="rechner" class="calc-card">
+      <div class="section-header" style="margin-bottom:12px;">
+        <div>
+          <h2 class="section-title">🧮 Interaktiver Preis-Simulator für die Familie</h2>
+          <p class="section-subtitle">Hier könnt ihr live am Handy oder PC testen, wie sich Wohnfläche und der Zustand der offenen Punkte (Fenster/Bad/Elektrik/Dämmung) auf den Wert auswirken</p>
+        </div>
+      </div>
+
+      <div class="calc-grid">
+        <div>
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>1. Tatsächliche Wohnfläche (inkl. DG):</span>
+              <span class="slider-val" id="lbl-wfl">96 m² (Richtwert Typ IIIa)</span>
+            </div>
+            <input type="range" id="inp-wfl" min="88" max="104" step="1" value="96" oninput="updateCalc()" />
+            <div style="display:flex;justify-content:space-between;font-size:0.73rem;color:#64748b;">
+              <span>88 m² (kompakt)</span>
+              <span>92 m²</span>
+              <span>96 m² (Mittel)</span>
+              <span>100 m²</span>
+              <span>104 m² (groß)</span>
+            </div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>2. Zustand der offenen Gewerke (Fenster, Bad, Elektrik, Dämmung):</span>
+              <span class="slider-val" id="lbl-cond">Solider Bestand (Standard)</span>
+            </div>
+            <input type="range" id="inp-cond" min="-30000" max="25000" step="5000" value="0" oninput="updateCalc()" />
+            <div style="display:flex;justify-content:space-between;font-size:0.73rem;color:#64748b;">
+              <span>Komplett sanierungsbedürftig (-30k)</span>
+              <span>Solider Bestand (±0)</span>
+              <span>Bereits modernisiert (+25k)</span>
+            </div>
+          </div>
+
+          <div class="slider-group" style="margin-bottom:0;">
+            <div class="slider-label">
+              <span>3. Gewünschter Verhandlungspuffer fürs Inserat (VB-Aufschlag):</span>
+              <span class="slider-val" id="lbl-buf">+24.000 € (~7 %)</span>
+            </div>
+            <input type="range" id="inp-buf" min="0" max="35000" step="1000" value="24000" oninput="updateCalc()" />
+            <div style="display:flex;justify-content:space-between;font-size:0.73rem;color:#64748b;">
+              <span>0 € (Festpreis)</span>
+              <span>+15.000 €</span>
+              <span>+24.000 € (Empfohlen)</span>
+              <span>+35.000 €</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-output">
+          <div class="calc-out-row">
+            <div>
+              <div style="font-size:0.75rem;color:#94a3b8;text-transform:uppercase;font-weight:700;">Berechneter Realistischer Marktwert</div>
+              <div style="font-size:0.78rem;color:#cbd5e1;">Inkl. 373,7 m² Eckgrundstück, Stellplatz & 2 J. Brenner</div>
+            </div>
+            <div class="calc-big" id="out-fair">335.000 €</div>
+          </div>
+          <div class="calc-out-row">
+            <div>
+              <div style="font-size:0.75rem;color:#94a3b8;text-transform:uppercase;font-weight:700;">Empfohlener Inserats-Startpreis (VB)</div>
+              <div style="font-size:0.78rem;color:#cbd5e1;">Inkl. gewähltem Verhandlungsspielraum</div>
+            </div>
+            <div class="calc-vb" id="out-ask">359.000 € VB</div>
+          </div>
+          <div class="calc-out-row">
+            <span style="font-size:0.82rem;color:#cbd5e1;">Entspricht Quadratmeterpreis (Marktwert):</span>
+            <strong style="font-size:0.95rem;color:#38bdf8;" id="out-qm">3.490 €/m²</strong>
+          </div>
+          <div class="calc-out-row">
+            <span style="font-size:0.82rem;color:#cbd5e1;">Amtlicher Bodenwert-Anteil (BORIS-BW):</span>
+            <strong style="font-size:0.9rem;color:#e2e8f0;">77.755 € (23,2 %)</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DIE 22 VERGLEICHSOBJEKTE -->
+    <section id="vergleich">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🏘️ Die 22 Vergleichsobjekte im Detail</h2>
+          <p class="section-subtitle">Alle Duplikate bereinigt · Jedes Haus mit farblicher Ampel-Bewertung, Direkt-Exposé-Link und kompletter Fotogalerie</p>
+        </div>
+      </div>
+
+      <!-- FILTER & VIEW SWITCHER -->
+      <div class="controls-bar">
+        <div class="controls-row-top">
+          <div class="filter-pills">
+            <button class="f-pill active" onclick="setFilter('all', this)">Alle Häuser (22)</button>
+            <button class="f-pill" onclick="setFilter('gwg_exact', this)">🟢 Gleicher GWG-Typ IIIa (5)</button>
+            <button class="f-pill" onclick="setFilter('gwg_similar', this)">🔵 Ähnliches GWG-Haus (8)</button>
+            <button class="f-pill" onclick="setFilter('rt_72760', this)">📍 Nur 72760 Reutlingen (11)</button>
+            <button class="f-pill" onclick="setFilter('reh_only', this)">🏠 Nur Eckhäuser (12)</button>
+            <button class="f-pill" onclick="setFilter('other', this)">⚪ Anderer Typ / Umland (9)</button>
+          </div>
+        </div>
+
+        <div class="controls-row-top">
+          <div class="controls-right" style="flex:1;">
+            <input type="text" id="search-box" class="search-input" placeholder="🔍 Suche nach Stadtteil, Straße, Heizung, Preis..." oninput="renderAll()" />
+            <select id="sort-box" class="sort-select" onchange="renderAll()">
+              <option value="id_asc">Sortierung: Standard (ID 1 – 22)</option>
+              <option value="gwg_first">Sortierung: Engste GWG-Verwandtschaft zuerst</option>
+              <option value="price_asc">Kaufpreis: Günstigste zuerst</option>
+              <option value="price_desc">Kaufpreis: Teuerste zuerst</option>
+              <option value="qm_asc">€/m²: Günstigste zuerst</option>
+              <option value="plot_desc">Grundstück: Größte zuerst (vgl. 374 m²)</option>
+            </select>
+            <div class="view-toggle">
+              <button class="view-btn active" id="btn-view-cards" onclick="setView('cards')">📱 Karten-Ansicht</button>
+              <button class="view-btn" id="btn-view-table" onclick="setView('table')">💻 PC-Tabelle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COUNT STATUS -->
+      <div id="results-count" style="font-size:0.85rem;font-weight:700;color:#475569;margin-bottom:14px;"></div>
+
+      <!-- CARDS GRID VIEW -->
+      <div id="cards-container" class="cards-grid"></div>
+
+      <!-- PC MASTER TABLE VIEW -->
+      <div id="table-container" class="table-wrapper">
+        <table class="master-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Foto</th>
+              <th>Objekt & Lage</th>
+              <th>Typ</th>
+              <th>GWG-Typologie (Vergleich zu Typ IIIa)</th>
+              <th>Kaufpreis</th>
+              <th>Preis-Bewertung</th>
+              <th>Wfl.</th>
+              <th>Grund</th>
+              <th>€/m²</th>
+              <th>BJ</th>
+              <th>DG / Speicher</th>
+              <th>Stellplatz</th>
+              <th>Heizung</th>
+              <th>EEK</th>
+              <th>Zustand</th>
+              <th>Fotos & Exposé</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FULLSCREEN PHOTO LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" onclick="if(event.target===this) closeLightbox()">
+    <div class="lb-header">
+      <div>
+        <div class="lb-title" id="lb-title">Objekt Titel</div>
+        <div class="lb-sub" id="lb-sub">Stadtteil · Preis · Flächen</div>
+      </div>
+      <button class="lb-close" onclick="closeLightbox()" title="Schließen (Esc)">✕</button>
+    </div>
+    <div class="lb-stage">
+      <button class="lb-arrow lb-prev" onclick="stepLightbox(-1)" title="Vorheriges Bild (←)">❮</button>
+      <img id="lb-img" src="" alt="Objektfoto" />
+      <button class="lb-arrow lb-next" onclick="stepLightbox(1)" title="Nächstes Bild (→)">❯</button>
+    </div>
+    <div class="lb-footer">
+      <div class="lb-caption" id="lb-caption">Bild 1 von 16</div>
+      <div class="lb-thumbs" id="lb-thumbs"></div>
+    </div>
+  </div>
+
+  <script>
+    const PROPERTIES = [{"id": "1", "pair_ref": "Abgleich mit ID 7 (Dürerstr. 98)", "title": "Gepflegtes Reiheneckhaus mit Carport & Garten in der Römerschanze", "typ": "Reiheneckhaus (REH)", "stadt": "Reutlingen", "stadtteil": "Römerschanze", "plz": "72760", "kaufpreis": 339000, "qm_preis": 4238, "wohnflaeche": 80.0, "grundstueck": 168.0, "baujahr": 1953, "baureihe": "1950er GWG-naher Siedlungsbau (Dürerstr.)", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse + voll unterkellert (Bad im UG)", "dachgeschoss": "Speicher / einfach ausgebaut", "stellplatz": "1x Carport auf Grundstück", "heizung": "Wassergeführte Gas-Zentralheizung", "heizungsalter": "Zentralheizung gepflegt (EA 1969)", "energieklasse": "G (212,26 kWh/m²a)", "zustand": "Gepflegt / Standard", "score": "9.5 / 10", "begruendung": "TOP-VERGLEICH: Römerschanze, Reiheneckhaus, Carport, BJ 1953, 80 m² Wfl. Vergleiche mit ID 7 (Dürerstr. 98 für 329.000 €).", "status": "Eindeutiger Treffer (22 Fotos)", "found_by": ["Chat GPT", "Gemini", "antigravity"], "match_gpt": "Objekt 1 (Römerschanze – 1953, 80 m², 168 m², 339.000 €)", "match_gemini": "Objekt 2 (Römerschanze – 1953, 80 m², 168 m², 339.000 €)", "match_claude": "Evtl. Schwesterobjekt / Nachbarhaus Dürerstr. 98 (Zeile 19)", "duplicate_reason": "ABGLEICH ZU ID 7: 1953er Reiheneckhaus in der Römerschanze Dürerstraße (Kleinanzeigen 339.000 €, 80 m² Wfl., 168 m² Grund). ID 7 ist Dürerstraße 98 (aktuell 298.000 €, 81 m² Wfl., 180 m² Grund). Entweder dasselbe Haus vor Preisreduktion oder das Nachbar-Endhaus derselben GWG-Zeile. Bereinigt auf 22 authentische Fotos.", "direct_links": [["Kleinanzeigen: Inserat 3562551305 (22 Fotos)", "https://www.kleinanzeigen.de/s-anzeige/reiheneckhaus-mit-carport-sofort-frei/3562551305-208-9346"], ["ImmoScout24: Exposé 172402758", "https://www.immobilienscout24.de/expose/172402758"], ["Immowelt: Exposé 943b74fd", "https://www.immowelt.de/expose/943b74fd-dbcb-470a-b17e-4786f33a02c2"]], "asset_key": "1", "gwg": {"cat": "Ähnliches GWG-Haus (Typ I Eckhaus)", "desc": "1953er Reiheneckhaus Römerschanze (Dürerstr.), kleinerer Typ I (80 m², Bad im UG, 168 m² Grund)", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🟡 Starke Eckhaus-Referenz (kleiner)", "desc": "339.000 € (4.238 €/m²) in der Römerschanze für nur 80 m² Wfl. & 168 m² Grund. Unser Haus hat +15 m² Wfl. & +205 m² Grund!", "color": "amber"}, "images": ["web_images/obj_1_01.jpg", "web_images/obj_1_02.jpg", "web_images/obj_1_03.jpg", "web_images/obj_1_04.jpg", "web_images/obj_1_05.jpg", "web_images/obj_1_06.jpg", "web_images/obj_1_07.jpg", "web_images/obj_1_08.jpg", "web_images/obj_1_09.jpg", "web_images/obj_1_10.jpg", "web_images/obj_1_11.jpg", "web_images/obj_1_12.jpg", "web_images/obj_1_13.jpg", "web_images/obj_1_14.jpg", "web_images/obj_1_15.jpg", "web_images/obj_1_16.jpg"], "total_original_photos": 22, "colors": {"dg": "amber", "stellplatz": "amber", "heizung": "amber", "eek": "green", "zustand": "amber"}, "is_reh": true}, {"id": "2", "pair_ref": "Eindeutiger Treffer", "title": "Reihenendhaus mit Carport & großem Garten (Handwerker-/Gestalterobjekt)", "typ": "Reiheneckhaus (REH)", "stadt": "Reutlingen", "stadtteil": "Voller Brunnen", "plz": "72760", "kaufpreis": 300000, "qm_preis": 3382, "wohnflaeche": 88.7, "grundstueck": 258.0, "baujahr": 1956, "baureihe": "1956er Siedlungs-Bauprogramm", "zimmer": 4.5, "ebenen_keller": "3 Ebenen, ca. 36 m² Keller", "dachgeschoss": "Ausgebaut (4,5 Zimmer)", "stellplatz": "1x Carport", "heizung": "Gas-Einzelöfen (Ofenheizung)", "heizungsalter": "Veraltet (Sanierungsbedarf)", "energieklasse": "H", "zustand": "Sanierungsbedürftig / Handwerkerobjekt", "score": "9.5 / 10", "begruendung": "Exaktes Baujahr 1956, fast identische Flächen (88,7 m² Wfl., 258 m² Grund), Eckhaus mit Carport im Nachbarviertel Voller Brunnen.", "status": "Eindeutiges Duplikat (GPT & Gemini identisch)", "found_by": ["Chat GPT", "Gemini", "antigravity"], "match_gpt": "Objekt 2 (Voller Brunnen – 1956, 88,7 m², 258 m², 300.000 €)", "match_gemini": "Objekt 1 (Voller Brunnen – 1956, 88,7 m², 258 m², 300.000 €)", "match_claude": "–", "duplicate_reason": "100% IDENTISCH: Identische Immowelt-UUID (71d78d68-50d9-434c-9a0c-c7bac8fa29e5) und Sparkassen-ID FID-F13-914-427. 55 Originalfotos vorliegend.", "direct_links": [["Immowelt: Exposé 71d78d68 (55 Fotos)", "https://www.immowelt.de/expose/71d78d68-50d9-434c-9a0c-c7bac8fa29e5"]], "asset_key": "2", "gwg": {"cat": "Exakt gleicher GWG-Typ (Typ IIIa Eckhaus)", "desc": "1956er GWG-Siedlungs-Eckhaus Voller Brunnen, 88,7 m² inkl. DG, 258 m² Grund, Carport", "color": "green", "group": "gwg_exact"}, "price_eval": {"cat": "🟢 Untergrenzen-Beleg (Sanierungsstau)", "desc": "300.000 € (3.382 €/m²) für 1956er Eckhaus (88,7 m² / 258 m²), aber nur Gas-Einzelöfen! Unser Haus hat Gas-ZH (Brenner 2 J.) & 374 m² Grund.", "color": "green"}, "images": ["web_images/obj_2_01.jpg", "web_images/obj_2_02.jpg", "web_images/obj_2_03.jpg", "web_images/obj_2_04.jpg", "web_images/obj_2_05.jpg", "web_images/obj_2_06.jpg", "web_images/obj_2_07.jpg", "web_images/obj_2_08.jpg", "web_images/obj_2_09.jpg", "web_images/obj_2_10.jpg", "web_images/obj_2_11.jpg", "web_images/obj_2_12.jpg", "web_images/obj_2_13.jpg", "web_images/obj_2_14.jpg", "web_images/obj_2_15.jpg", "web_images/obj_2_16.jpg"], "total_original_photos": 55, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "red", "eek": "red", "zustand": "red"}, "is_reh": true}, {"id": "3", "pair_ref": "Bestätigtes Duplikat / Zusammengeführt", "title": "GWG-Reihenmittelhaus Typ I mit Garage in Reutlingen-Voller Brunnen", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Voller Brunnen", "plz": "72760", "kaufpreis": 224000, "qm_preis": 3184, "wohnflaeche": 70.35, "grundstueck": 130.0, "baujahr": 1957, "baureihe": "GWG Reutlingen Typ I", "zimmer": 3.0, "ebenen_keller": "2 Vollgeschosse + voll unterkellert (Bad im UG)", "dachgeschoss": "Dachstudio fast vollständig ausgebaut (ca. 32 m² Nutzfläche)", "stellplatz": "1x Betonfertiggarage", "heizung": "Gasumluftheizung bis ins Dachgeschoss", "heizungsalter": "Bestand / älter", "energieklasse": "F / H (191,42 kWh/m²a)", "zustand": "Gepflegt mit Modernisierungsbedarf", "score": "8.5 / 10", "begruendung": "Authentisches GWG-Siedlungshaus Typ I. 224.000 € war der letzte Angebotspreis (ImmoScout 160009520, vormals 257.000 €). Vom Nutzer bestätigt als dasselbe Objekt wie ehemals 3B zusammengeführt.", "status": "Bestätigtes Duplikat / Zusammengeführt", "found_by": ["Gemini", "Claude", "antigravity"], "match_gpt": "–", "match_gemini": "Objekt 3 (GWG-Reihenmittelhaus Voller Brunnen, 224.000 €)", "match_claude": "Zeile 17 (Voller Brunnen GWG Typ I, vormals 257.000 € gelistet)", "duplicate_reason": "ZUSAMMENGEFÜHRT: Ehemals 3A und 3B. Dasselbe Objekt (GWG Typ I, 70,35 m² Wfl., 130 m² Grund, Garage). Zeigt die Preisentwicklung von 257.000 € (Von Poll Erstaufruf) auf 224.000 € (ImmoScout Letztpreis). 10 Originalfotos aus Von-Poll-Exposé vorhanden.", "direct_links": [["ImmoScout24: Exposé 160009520 (Letztpreis 224k)", "https://www.immobilienscout24.de/expose/160009520#/"], ["Von Poll: PDF-Originalexposé 25362196 (10 Fotos)", "https://cdn.von-poll.com/properties/pdfs/25362196/de.pdf"]], "asset_key": "3", "gwg": {"cat": "Ähnliches GWG-Haus (Kleinerer Typ I)", "desc": "1957er GWG-Typ-I Mittelhaus Voller Brunnen, 70,35 m² (Bad im UG) + 32 m² DG-Studio", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🟢 Untergrenze kleiner GWG Typ I", "desc": "224.000 € (3.184 €/m²) für kleines 70 m² Mittelhaus (Bad im UG). Unser Typ IIIa (92-100 m², Bad im OG, 374 m² Eckgrund) spielt eine Liga höher.", "color": "green"}, "images": ["web_images/obj_3_01.jpg", "web_images/obj_3_02.jpg", "web_images/obj_3_03.jpg", "web_images/obj_3_04.jpg", "web_images/obj_3_05.jpg", "web_images/obj_3_06.jpg", "web_images/obj_3_07.jpg", "web_images/obj_3_08.jpg", "web_images/obj_3_09.jpg", "web_images/obj_3_10.jpg"], "total_original_photos": 10, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "green", "zustand": "amber"}, "is_reh": false}, {"id": "4", "pair_ref": "Eindeutiger Treffer (Orschel-Hagen)", "title": "Gepflegtes Reihenmittelhaus mit Garage und Balkon in Storlach", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Storlach", "plz": "72760", "kaufpreis": 309000, "qm_preis": 3433, "wohnflaeche": 90.0, "grundstueck": 150.0, "baujahr": 1955, "baureihe": "1955er Siedlungsbau Storlach", "zimmer": 4.0, "ebenen_keller": "Voll unterkellert, Balkon", "dachgeschoss": "Ausgebaut", "stellplatz": "1x Garage", "heizung": "Gas-Zentralheizung", "heizungsalter": "Gepflegter Kessel (ca. 2012)", "energieklasse": "Gepflegt", "zustand": "Gepflegt", "score": "8.5 / 10", "begruendung": "Direktes Nachbarquartier Storlach, BJ 1955, 90 m² Wfl., Gasheizung 2012, 32 Fotos vorhanden. Vergleiche mit ID 16A (249k) und ID 16B (328k/359k).", "status": "Eindeutiger Einzeltreffer", "found_by": ["Chat GPT", "Gemini", "antigravity"], "match_gpt": "Objekt 3 (Storlach – 1955, 90 m², 150 m², Garage, 309.000 €)", "match_gemini": "Erwähnt in Gemini Fließtext Storlach (1954/55, 90-94 m², Gasheizung)", "match_claude": "Evtl. Zeile 23 (Storlach 90 m² / 158 m²)", "duplicate_reason": "Keine Überschneidung mit Nordstadt. Eigenständiges Objekt in Orschel-Hagen (245.000 €, 74 m² Wfl., 140 m² Grund, BJ 1965).", "direct_links": [["Immowelt: Exposé 021c0308 (32 Fotos)", "https://www.immowelt.de/expose/021c0308-158c-42c9-9f6f-67b64061ee55"]], "asset_key": "4", "gwg": {"cat": "Exakt gleicher GWG-Typ (Typ IIIa, 1955)", "desc": "1955er GWG-Mittelhaus Storlach, 90 m² Wfl. inkl. DG, Balkon zum Garten, Bad im OG", "color": "green", "group": "gwg_exact"}, "price_eval": {"cat": "🟢 Top-Referenz Typ IIIa (Mittelhaus)", "desc": "309.000 € (3.433 €/m²) für 1955er Typ IIIa (90 m², Balkon), aber nur Mittelhaus mit 150 m² Grund in Storlach.", "color": "green"}, "images": ["web_images/obj_4_01.jpg", "web_images/obj_4_02.jpg", "web_images/obj_4_03.jpg", "web_images/obj_4_04.jpg", "web_images/obj_4_05.jpg", "web_images/obj_4_06.jpg", "web_images/obj_4_07.jpg", "web_images/obj_4_08.jpg", "web_images/obj_4_09.jpg", "web_images/obj_4_10.jpg", "web_images/obj_4_11.jpg", "web_images/obj_4_12.jpg", "web_images/obj_4_13.jpg", "web_images/obj_4_14.jpg", "web_images/obj_4_15.jpg", "web_images/obj_4_16.jpg"], "total_original_photos": 32, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "red", "zustand": "amber"}, "is_reh": false}, {"id": "5", "pair_ref": "Eindeutiger Treffer", "title": "Modernisiertes Reihenmittelhaus in der Römerschanze (Bereits preisreduziert)", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Römerschanze", "plz": "72760", "kaufpreis": 349000, "qm_preis": 3490, "wohnflaeche": 100.0, "grundstueck": 105.0, "baujahr": 1955, "baureihe": "1955er Römerschanze Bestand", "zimmer": 4.0, "ebenen_keller": "Voll unterkellert, Gäste-WC", "dachgeschoss": "Ausgebaut", "stellplatz": "1x Carport", "heizung": "Gas-Zentralheizung", "heizungsalter": "Modernisiert", "energieklasse": "Modernisiert / gehoben", "zustand": "Gepflegt / modernisiert", "score": "8.0 / 10", "begruendung": "Sehr guter Lage- und Altersvergleich (Römerschanze, 1955, 100 m²). Preis wurde von 379.000 € auf 349.000 € gesenkt. 29 Fotos vorhanden.", "status": "Eindeutiges Duplikat (GPT & Gemini identisch)", "found_by": ["Chat GPT", "Gemini", "antigravity"], "match_gpt": "Objekt 4 (Römerschanze – 1955, 100 m², 105 m², 349.000 €)", "match_gemini": "Objekt 4 (Römerschanze – 1955, 100 m², 105 m², 349.000 €)", "match_claude": "–", "duplicate_reason": "100% IDENTISCH: Immowelt-UUID 7bdc75b3-d05f-41f8-b23c-a84db5499097. Beide KIs dokumentieren exakt dieselbe Preisreduktion von 379.000 € auf 349.000 €.", "direct_links": [["Immowelt: Exposé 7bdc75b3 (29 Fotos)", "https://www.immowelt.de/expose/7bdc75b3-d05f-41f8-b23c-a84db5499097"]], "asset_key": "5", "gwg": {"cat": "Exakt gleicher GWG-Typ (Typ IIIa, 1955)", "desc": "1955er Römerschanze-Mittelhaus, 100 m² Wfl. inkl. DG, Gäste-WC im EG, 105 m² Grund", "color": "green", "group": "gwg_exact"}, "price_eval": {"cat": "🟡 Top-Referenz Typ IIIa Römerschanze", "desc": "349.000 € (3.490 €/m², vormals 379k) für 1955er Typ IIIa (100 m², Gäste-WC) in Römerschanze – modernisiert, aber nur 105 m² Mittelhaus-Grund!", "color": "amber"}, "images": ["web_images/obj_5_01.jpg", "web_images/obj_5_02.jpg", "web_images/obj_5_03.jpg", "web_images/obj_5_04.jpg", "web_images/obj_5_05.jpg", "web_images/obj_5_06.jpg", "web_images/obj_5_07.jpg", "web_images/obj_5_08.jpg", "web_images/obj_5_09.jpg", "web_images/obj_5_10.jpg", "web_images/obj_5_11.jpg", "web_images/obj_5_12.jpg", "web_images/obj_5_13.jpg", "web_images/obj_5_14.jpg", "web_images/obj_5_15.jpg", "web_images/obj_5_16.jpg"], "total_original_photos": 29, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "green", "eek": "green", "zustand": "amber"}, "is_reh": false}, {"id": "6", "pair_ref": "Bestätigtes Duplikat / Zusammengeführt", "title": "Reihenmittelhaus Römerschanze (92 m² / 111 m² Grund)", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Römerschanze", "plz": "72760", "kaufpreis": 319000, "qm_preis": 3467, "wohnflaeche": 92.0, "grundstueck": 111.0, "baujahr": 1954, "baureihe": "1954er Bauprogramm Römerschanze", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse, massiv, voll unterkellert (Bad im UG)", "dachgeschoss": "Gemütliches Dachstudio ausgebaut (Satteldach 2016 erneuert)", "stellplatz": "Kein eigener Stellplatz (Öffentlicher Straßenraum)", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestand (Modernisierungen 2016 Dach/Fassade, 2022 weitere Maßnahmen)", "energieklasse": "F", "zustand": "Bezugsfrei, teilsaniert, Garten mit Pergola & schöner Aussicht", "score": "9.0 / 10", "begruendung": "Exzellentes Vergleichsobjekt direkt in der Römerschanze! BJ 1954, 92 m² Wfl., 111 m² Grund. Vormals bei Claude mit 355.000 € gelistet, bei GPT/Gemini für 319.000 € von privat. Aktuell direkt auf Immowelt für 319.000 € durch RE/MAX inseriert. 10 Originalfotos im Album vorhanden!", "status": "Bestätigtes Duplikat / Zusammengeführt", "found_by": ["Chat GPT", "Gemini", "Claude", "antigravity"], "match_gpt": "Objekt 5 (Römerschanze – 1954, 92 m², 111 m², 319.000 €)", "match_gemini": "Objekt 5 (Römerschanze – 1954, 92 m², 111 m², 319.000 €)", "match_claude": "Zeile 20 (Römerschanze, 92 m² / 111 m², ehemals 355.000 € Maklerangebot)", "duplicate_reason": "ZUSAMMENGEFÜHRT: Ehemals 6A und 6B. Auf den Quadratmeter identische Kennzahlen in der Römerschanze (92 m² Wfl., 111 m² Grund, BJ 1954). Zeigt die Vermarktungshistorie von 355.000 € (Claude Maklerpreis) auf 319.000 € (aktuelles Direkt-Exposé bei Immowelt via RE/MAX). 10 Originalfotos direkt extrahiert.", "direct_links": [["Immowelt: Original-Exposé 12a4f420 (319.000 €)", "https://www.immowelt.de/expose/12a4f420-ad3c-4516-9691-2061e0ac77c8"]], "asset_key": "6", "gwg": {"cat": "Eng verwandtes GWG-Haus (Römerschanze 92 m²)", "desc": "1954er Römerschanze-Mittelhaus, exakt 92 m² inkl. DG (Übergangstyp, Bad im UG, 111 m² Grund)", "color": "green", "group": "gwg_exact"}, "price_eval": {"cat": "🟢 Solide 92-m²-Referenz Römerschanze", "desc": "319.000 € (3.467 €/m², vormals 355k) für 92 m² Mittelhaus ohne Stellplatz mit nur 111 m² Grund & Bad im UG.", "color": "green"}, "images": ["web_images/obj_6_01.jpg", "web_images/obj_6_02.jpg", "web_images/obj_6_03.jpg", "web_images/obj_6_04.jpg", "web_images/obj_6_05.jpg", "web_images/obj_6_06.jpg", "web_images/obj_6_07.jpg", "web_images/obj_6_08.jpg", "web_images/obj_6_09.jpg", "web_images/obj_6_10.jpg"], "total_original_photos": 10, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "amber", "eek": "amber", "zustand": "green"}, "is_reh": false}, {"id": "7", "pair_ref": "Abgleich mit ID 1 (Dürerstraße)", "title": "Reihenendhaus Dürerstraße 98 (Römerschanze)", "typ": "Reiheneckhaus / Reihenendhaus", "stadt": "Reutlingen", "stadtteil": "Römerschanze", "plz": "72760", "kaufpreis": 298000, "qm_preis": 3679, "wohnflaeche": 81.0, "grundstueck": 180.0, "baujahr": 1960, "baureihe": "Siedlungsbau Römerschanze (Dürerstr.)", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse, unterkellert, 2 Bäder, 2 WCs (Nutzung als 2 Wohnungen möglich)", "dachgeschoss": "Ausgebaut / 10 m² Terrasse", "stellplatz": "Kein eigener Stellplatz ausgewiesen", "heizung": "Gas-Zentralheizung", "heizungsalter": "Ca. 1997 teilrenoviert", "energieklasse": "H", "zustand": "Frei ab sofort, bezugsfrei / modernisierungsbedürftig", "score": "9.2 / 10", "begruendung": "Direkte Nachbarschaft zum Oma-Haus in der Dürerstraße! Vormals bei Claude für 329.000 € erfasst, im Portal dann auf 315.000 € und aktuell auf 298.000 € gesenkt! 12 Originalfotos im Album vorhanden.", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["Claude", "antigravity"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 19 (Römerschanze, Reihenendhaus Dürerstr. 98, vormals 329.000 €)", "duplicate_reason": "ABGLEICH ZU ID 1: Liegt in derselben Straße (Dürerstraße 98) wie das Oma-Haus bzw. Objekt 1. Flächen nahezu identisch (81 vs. 80 m² Wfl., 180 vs. 168 m² Grund). Zeigt drastische Preissenkung von 329.000 € über 315.000 € auf aktuell 298.000 €. 12 Originalfotos direkt extrahiert.", "direct_links": [["Immowelt: Original-Exposé 8c00177d (Dürerstr. 98, 298.000 €)", "https://www.immowelt.de/expose/8c00177d-088c-4dfd-bb0f-1930082afd9f"]], "asset_key": "7", "gwg": {"cat": "Ähnliches GWG-Haus (Römerschanze Eckhaus)", "desc": "Reihenendhaus Dürerstraße 98, kleinerer Grundriss (81 m² Wfl., 180 m² Grund, ohne Stellplatz)", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🟢 Preis-Untergrenze Römerschanze-REH", "desc": "298.000 € (3.679 €/m², gesenkt von 329k) für kleines 81 m² Eckhaus ohne Stellplatz, EEK H und nur 180 m² Grund.", "color": "green"}, "images": ["web_images/obj_7_01.jpg", "web_images/obj_7_02.jpg", "web_images/obj_7_03.jpg", "web_images/obj_7_04.jpg", "web_images/obj_7_05.jpg", "web_images/obj_7_06.jpg", "web_images/obj_7_07.jpg", "web_images/obj_7_08.jpg", "web_images/obj_7_09.jpg", "web_images/obj_7_10.jpg", "web_images/obj_7_11.jpg", "web_images/obj_7_12.jpg"], "total_original_photos": 12, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "amber", "eek": "red", "zustand": "amber"}, "is_reh": true}, {"id": "8", "pair_ref": "Eindeutiger Treffer", "title": "Umfassend saniertes Reiheneckhaus mit Großgrundstück in Voller Brunnen", "typ": "Reiheneckhaus (REH)", "stadt": "Reutlingen", "stadtteil": "Voller Brunnen", "plz": "72760", "kaufpreis": 459000, "qm_preis": 4266, "wohnflaeche": 107.6, "grundstueck": 418.0, "baujahr": 1962, "baureihe": "1960er Eckhaustyp", "zimmer": 5.5, "ebenen_keller": "Voll unterkellert", "dachgeschoss": "Voll ausgebaut", "stellplatz": "Parkplatz / Garage vorhanden", "heizung": "Gas-Zentralheizung", "heizungsalter": "Modern", "energieklasse": "Gepflegt (2005 kernsaniert)", "zustand": "2005 umfassend saniert", "score": "8.0 / 10 (Sinnvolle Obergrenze)", "begruendung": "Markiert die absolute Preisobergrenze für ein Endhaus in 72760 mit 418 m² Grundstück und 2005er Sanierungsstandard. 93 Fotos vorliegend.", "status": "Eindeutiger Einzeltreffer", "found_by": ["Gemini", "antigravity"], "match_gpt": "–", "match_gemini": "Objekt 6 (Voller Brunnen – 1962 saniert, 459.000 €)", "match_claude": "–", "duplicate_reason": "EINZELTREFFER: Hödl Immoteam / Immowelt-UUID 271b8e8a-6c08-4db9-b432-40fa4f29e8e6.", "direct_links": [["Immowelt: Exposé 271b8e8a (Hödl Immoteam, 93 Fotos)", "https://www.immowelt.de/expose/271b8e8a-6c08-4db9-b432-40fa4f29e8e6"]], "asset_key": "8", "gwg": {"cat": "Ähnliches GWG-Haus (1962er Groß-Eckhaus)", "desc": "1962er GWG-Erweiterung Voller Brunnen, 107,6 m² Wfl., 418 m² Eckgrundstück (vgl. unsere 374 m²!)", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🔴 Obergrenze (Saniert + 418 m² Grund)", "desc": "459.000 € (4.266 €/m²) zeigt das Potenzial eines ~100 m² Eckhauses mit ~400 m² Grundstück nach Kernsanierung.", "color": "red"}, "images": ["web_images/obj_8_01.jpg", "web_images/obj_8_02.jpg", "web_images/obj_8_03.jpg", "web_images/obj_8_04.jpg", "web_images/obj_8_05.jpg", "web_images/obj_8_06.jpg", "web_images/obj_8_07.jpg", "web_images/obj_8_08.jpg", "web_images/obj_8_09.jpg", "web_images/obj_8_10.jpg", "web_images/obj_8_11.jpg", "web_images/obj_8_12.jpg", "web_images/obj_8_13.jpg", "web_images/obj_8_14.jpg", "web_images/obj_8_15.jpg", "web_images/obj_8_16.jpg"], "total_original_photos": 93, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "green", "zustand": "green"}, "is_reh": true}, {"id": "9", "pair_ref": "Eindeutiger Treffer", "title": "Tolles Reiheneckhaus mit Außenstellplatz und tollem Garten in Orschel-Hagen", "typ": "Reiheneckhaus (REH)", "stadt": "Reutlingen", "stadtteil": "Orschel-Hagen", "plz": "72769", "kaufpreis": 369000, "qm_preis": 4011, "wohnflaeche": 92.0, "grundstueck": 245.0, "baujahr": 1966, "baureihe": "Orschel-Hagen Siedlungs-Eckhaus", "zimmer": 4.0, "ebenen_keller": "Voll unterkellert", "dachgeschoss": "Ausgebaut", "stellplatz": "1x Außenstellplatz (AAP)", "heizung": "Zentralheizung", "heizungsalter": "Gepflegt", "energieklasse": "263,55 kWh/m²a", "zustand": "Gepflegt, sofort frei", "score": "8.5 / 10", "begruendung": "Sehr hohe Übereinstimmung bei Ecklage, Stellplatz, Wohnfläche (92 m²) und Grundstück (245 m²). 22 Fotos vorhanden.", "status": "Eindeutiger Einzeltreffer", "found_by": ["Claude", "antigravity"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 24 (Orschel-Hagen Reiheneckhaus 369.000 €, 92 m² / 245 m², BJ 1966)", "duplicate_reason": "EINZELTREFFER: Verifiziertes Einzel-Exposé auf Wohnglück (ID 1608063) mit Originalfotos.", "direct_links": [["Wohnglück: Objekt 1608063 (22 Fotos)", "https://wohnglueck.de/property/1608063"]], "asset_key": "9", "gwg": {"cat": "Anderer Haustyp / Bauträger", "desc": "1966er Siedlungs-Eckhaus Orschel-Hagen, 92 m² Wfl., 245 m² Grund, spätere Bauphase", "color": "gray", "group": "other"}, "price_eval": {"cat": "🟠 Vergleich 92 m² Eckhaus + Stellplatz", "desc": "369.000 € (4.011 €/m²) für 92 m² Eckhaus mit Stellplatz & 245 m² Grund in Orschel-Hagen trotz schwachem Energiekennwert (263 kWh).", "color": "amber"}, "images": ["web_images/obj_9_01.jpg", "web_images/obj_9_02.jpg", "web_images/obj_9_03.jpg", "web_images/obj_9_04.jpg", "web_images/obj_9_05.jpg", "web_images/obj_9_06.jpg", "web_images/obj_9_07.jpg", "web_images/obj_9_08.jpg", "web_images/obj_9_09.jpg", "web_images/obj_9_10.jpg", "web_images/obj_9_11.jpg", "web_images/obj_9_12.jpg", "web_images/obj_9_13.jpg", "web_images/obj_9_14.jpg", "web_images/obj_9_15.jpg", "web_images/obj_9_16.jpg"], "total_original_photos": 22, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "amber", "eek": "green", "zustand": "amber"}, "is_reh": true}, {"id": "10", "pair_ref": "Eindeutiger Treffer", "title": "Gepflegtes Reihenmittelhaus mit Garten & Garage in Neckartenzlingen", "typ": "Reihenmittelhaus (RMH)", "stadt": "Neckartenzlingen", "stadtteil": "Ortslage", "plz": "72654", "kaufpreis": 358000, "qm_preis": 4090, "wohnflaeche": 87.54, "grundstueck": 184.0, "baujahr": 1954, "baureihe": "1954er Bauprogramm", "zimmer": 4.0, "ebenen_keller": "Voll unterkellert", "dachgeschoss": "Ausgebaut", "stellplatz": "1x Garage", "heizung": "Öl-Zentralheizung", "heizungsalter": "Gepflegt", "energieklasse": "Gepflegt", "zustand": "Gepflegt", "score": "8.0 / 10", "begruendung": "Exzellenter Altersvergleich (1954) und mit 87,5 m² sehr nah an den 92 m². 20 Fotos vorhanden.", "status": "Eindeutiger Einzeltreffer", "found_by": ["Claude", "antigravity"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 34 (Neckartenzlingen RMH 358.000 €, 87,5 m² / 184 m², BJ 1954)", "duplicate_reason": "EINZELTREFFER: Verifiziertes Einzel-Exposé auf Wohnglück (ID 1917775) mit Originalfotos.", "direct_links": [["Wohnglück: Objekt 1917775 (20 Fotos)", "https://wohnglueck.de/property/1917775"]], "asset_key": "10", "gwg": {"cat": "Anderer Haustyp / Bauträger", "desc": "1954er Reihenmittelhaus Neckartenzlingen (Umland / freier Träger, 87,5 m²)", "color": "gray", "group": "other"}, "price_eval": {"cat": "🟠 Leicht überhöht für Umland", "desc": "358.000 € (4.090 €/m²). Hoher Quadratmeterpreis für ein Mittelhaus mit alter Ölheizung in Neckartenzlingen.", "color": "amber"}, "images": ["web_images/obj_10_01.jpg", "web_images/obj_10_02.jpg", "web_images/obj_10_03.jpg", "web_images/obj_10_04.jpg", "web_images/obj_10_05.jpg", "web_images/obj_10_06.jpg", "web_images/obj_10_07.jpg", "web_images/obj_10_08.jpg", "web_images/obj_10_09.jpg", "web_images/obj_10_10.jpg", "web_images/obj_10_11.jpg", "web_images/obj_10_12.jpg", "web_images/obj_10_13.jpg", "web_images/obj_10_14.jpg", "web_images/obj_10_15.jpg", "web_images/obj_10_16.jpg"], "total_original_photos": 20, "colors": {"dg": "green", "stellplatz": "green", "heizung": "red", "eek": "red", "zustand": "amber"}, "is_reh": false}, {"id": "11", "pair_ref": "Eindeutiger Treffer", "title": "Reiheneckhaus mit großer Garage & Riesen-Garten in Lichtenstein-Unterhausen", "typ": "Reiheneckhaus (REH)", "stadt": "Lichtenstein", "stadtteil": "Unterhausen", "plz": "72805", "kaufpreis": 386000, "qm_preis": 3822, "wohnflaeche": 101.0, "grundstueck": 445.0, "baujahr": 1955, "baureihe": "1955er Siedlungshaus", "zimmer": 4.5, "ebenen_keller": "Voll unterkellert", "dachgeschoss": "Ausgebaut", "stellplatz": "1x Garage", "heizung": "Öl-Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "Gepflegt/modernisiert", "zustand": "Gepflegt", "score": "8.5 / 10", "begruendung": "Exaktes Baujahr 1955, 101 m² Wfl., Eckhaus + Garage im direkten Albvorland (ca. 8 km). 43 Fotos vorliegend.", "status": "Eindeutiger Einzeltreffer", "found_by": ["Gemini", "antigravity"], "match_gpt": "–", "match_gemini": "Objekt 7 (Unterhausen – 1955, 101 m², 445 m², 386.000 €)", "match_claude": "–", "duplicate_reason": "EINZELTREFFER: Garant Immobilien / Immowelt-UUID 4d01f718-cd0f-4041-bd5f-0e3c0168993c.", "direct_links": [["Immowelt: Exposé 4d01f718 (Garant Immo, 43 Fotos)", "https://www.immowelt.de/expose/4d01f718-cd0f-4041-bd5f-0e3c0168993c"]], "asset_key": "11", "gwg": {"cat": "Anderer Haustyp (1955er Eckhaus Umland)", "desc": "1955er Reiheneckhaus Unterhausen, 101 m² Wfl. & 445 m² Großgrundstück (guter Flächenvergleich)", "color": "gray", "group": "other"}, "price_eval": {"cat": "🟡 Guter Flächenvergleich (101 m² / 445 m²)", "desc": "386.000 € (3.822 €/m²) für ein 1955er Eckhaus mit 101 m² Wfl. und 445 m² Großgrundstück in Unterhausen.", "color": "amber"}, "images": ["web_images/obj_11_01.jpg", "web_images/obj_11_02.jpg", "web_images/obj_11_03.jpg", "web_images/obj_11_04.jpg", "web_images/obj_11_05.jpg", "web_images/obj_11_06.jpg", "web_images/obj_11_07.jpg", "web_images/obj_11_08.jpg", "web_images/obj_11_09.jpg", "web_images/obj_11_10.jpg", "web_images/obj_11_11.jpg", "web_images/obj_11_12.jpg", "web_images/obj_11_13.jpg", "web_images/obj_11_14.jpg", "web_images/obj_11_15.jpg", "web_images/obj_11_16.jpg"], "total_original_photos": 43, "colors": {"dg": "green", "stellplatz": "green", "heizung": "red", "eek": "red", "zustand": "amber"}, "is_reh": true}, {"id": "12", "pair_ref": "Eindeutiger Treffer", "title": "Reiheneckhaus mit Großgrundstück & Garage in Sindelfingen", "typ": "Reiheneckhaus (REH)", "stadt": "Sindelfingen", "stadtteil": "Goldberg / Wohnlage", "plz": "71065", "kaufpreis": 548000, "qm_preis": 4724, "wohnflaeche": 116.0, "grundstueck": 633.0, "baujahr": 1956, "baureihe": "1956er Eckhaus", "zimmer": 6.0, "ebenen_keller": "Voll unterkellert", "dachgeschoss": "Ausgebaut", "stellplatz": "1x abschließbare Garage", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestandsnah", "energieklasse": "Bestandsnah", "zustand": "Bestandsnah / renovierungsbedürftig", "score": "6.0 / 10 (Regionaler Makro-Vergleich 50 km)", "begruendung": "Gleiches Baujahr (1956) und Ecklage, aber durch 633 m² Grund im Stuttgarter Speckgürtel deutlich teurer. 43 Fotos vorhanden.", "status": "Eindeutiger Einzeltreffer", "found_by": ["Gemini", "antigravity"], "match_gpt": "–", "match_gemini": "Objekt 8 (Sindelfingen – 1956, 116 m², 633 m², 548.000 €)", "match_claude": "–", "duplicate_reason": "EINZELTREFFER: Mönig Immobilien / ImmoScout24 (169698400).", "direct_links": [["ImmoScout24: Exposé 169698400 (Mönig Immo, 43 Fotos)", "https://www.immobilienscout24.de/expose/169698400#/"], ["1A-Immobilienmarkt: Exposé 27153629", "https://www.1a-immobilienmarkt.de/expose/27153629.html"]], "asset_key": "12", "gwg": {"cat": "Anderer Haustyp / Bauträger", "desc": "1956er Reiheneckhaus Sindelfingen, 633 m² Großgrundstück (Stuttgarter Umland)", "color": "gray", "group": "other"}, "price_eval": {"cat": "🔴 Extrem teuer (Sindelfingen-Faktor)", "desc": "548.000 € (4.724 €/m²). Stark verzerrt durch Sindelfinger Bodenrichtwert (950 €/m²), nicht übertragbar.", "color": "red"}, "images": ["web_images/obj_12_01.jpg", "web_images/obj_12_02.jpg", "web_images/obj_12_03.jpg", "web_images/obj_12_04.jpg", "web_images/obj_12_05.jpg", "web_images/obj_12_06.jpg", "web_images/obj_12_07.jpg", "web_images/obj_12_08.jpg", "web_images/obj_12_09.jpg", "web_images/obj_12_10.jpg", "web_images/obj_12_11.jpg", "web_images/obj_12_12.jpg", "web_images/obj_12_13.jpg", "web_images/obj_12_14.jpg", "web_images/obj_12_15.jpg", "web_images/obj_12_16.jpg"], "total_original_photos": 43, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "green", "zustand": "red"}, "is_reh": true}, {"id": "13", "pair_ref": "Eindeutiger Treffer", "title": "Gepflegtes Reihenmittelhaus in Reutlingen-Oferdingen", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Oferdingen", "plz": "72768", "kaufpreis": 298000, "qm_preis": 3239, "wohnflaeche": 92.0, "grundstueck": 150.0, "baujahr": 1968, "baureihe": "1960er-Siedlungsbau", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse, voll unterkellert, Terrasse & Garten", "dachgeschoss": "Ausgebaut", "stellplatz": "Garage vorhanden", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "H", "zustand": "Gepflegt mit Modernisierungsbedarf", "score": "8.0 / 10", "begruendung": "Reales Direkt-Exposé in Reutlingen-Oferdingen (72768). 298.000 € für 92 m² Wfl. und 150 m² Grund. 25 Originalfotos im Album vorhanden.", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["Chat GPT"], "match_gpt": "Zeile 10 (Nürtingen-Oberensingen – 1952, 100 m², 193 m², 349.500 €)", "match_gemini": "–", "match_claude": "–", "duplicate_reason": "DIREKT-EXPOSÉ: Ersetzt die alte Nürtingen-Sammelsuche durch ein konkretes Objekt im Reutlinger Norden (Oferdingen, 72768) mit 298.000 € Kaufpreis und 16 Galerie-Bildern.", "direct_links": [["Immowelt: Original-Exposé 536fbea9 (298.000 €)", "https://www.immowelt.de/expose/536fbea9-e15a-4c3c-b1b3-52a3d3ff82f8"]], "asset_key": "13", "gwg": {"cat": "Anderer Haustyp / Bauträger", "desc": "1968er Siedlungsbau Oferdingen, 92 m² Wfl., spätere Bauperiode", "color": "gray", "group": "other"}, "price_eval": {"cat": "🟢 Günstiger Einstiegspreis", "desc": "298.000 € (3.239 €/m²) für 92 m² Wfl. und Garage in Oferdingen. Raum für Modernisierung.", "color": "green"}, "images": ["web_images/obj_13_01.jpg", "web_images/obj_13_02.jpg", "web_images/obj_13_03.jpg", "web_images/obj_13_04.jpg", "web_images/obj_13_05.jpg", "web_images/obj_13_06.jpg", "web_images/obj_13_07.jpg", "web_images/obj_13_08.jpg", "web_images/obj_13_09.jpg", "web_images/obj_13_10.jpg", "web_images/obj_13_11.jpg", "web_images/obj_13_12.jpg", "web_images/obj_13_13.jpg", "web_images/obj_13_14.jpg", "web_images/obj_13_15.jpg", "web_images/obj_13_16.jpg"], "total_original_photos": 16, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "red", "zustand": "amber"}, "is_reh": false}, {"id": "14", "pair_ref": "Eindeutiger Treffer", "title": "Gepflegtes Reihenmittelhaus in Reutlingen-Voller Brunnen", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Voller Brunnen", "plz": "72760", "kaufpreis": 265000, "qm_preis": 3581, "wohnflaeche": 74.0, "grundstueck": 80.0, "baujahr": 1957, "baureihe": "GWG Reutlingen", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse, unterkellert", "dachgeschoss": "Ausgebaut", "stellplatz": "Öffentlicher Straßenraum", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "D", "zustand": "Gepflegt, solide Bausubstanz", "score": "8.5 / 10", "begruendung": "Konkretes GWG-Reihenmittelhaus in Voller Brunnen (72760). Entspricht Claude Zeile 27 (265.000 €, 74 m² / 80 m²). 34 Originalfotos vorhanden!", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["Claude"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 16 (Voller Brunnen RMH 349.000 €, 84 m² / 172 m², BJ 1956)", "duplicate_reason": "DIREKT-EXPOSÉ: Aus Claude Zeile 27. Exaktes GWG-Reihenhaus in Voller Brunnen für 265.000 € (74 m² Wfl., 80 m² Grund). 16 Fotos im Album.", "direct_links": [["Immowelt: Original-Exposé f68e360f (265.000 €)", "https://www.immowelt.de/expose/f68e360f-faed-4baf-afa9-b2e245301da0"]], "asset_key": "14", "gwg": {"cat": "Ähnliches GWG-Haus (Kleinerer Typ I)", "desc": "1957er GWG-Reihenmittelhaus Voller Brunnen, kompakter Typ I (74 m² Wfl., 80 m² Grund)", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🟢 Referenz kleiner GWG Typ I (74 m²)", "desc": "265.000 € (3.581 €/m²) für kleines 74 m² Mittelhaus mit nur 80 m² Grund ohne Stellplatz.", "color": "green"}, "images": ["web_images/obj_14_01.jpg", "web_images/obj_14_02.jpg", "web_images/obj_14_03.jpg", "web_images/obj_14_04.jpg", "web_images/obj_14_05.jpg", "web_images/obj_14_06.jpg", "web_images/obj_14_07.jpg", "web_images/obj_14_08.jpg", "web_images/obj_14_09.jpg", "web_images/obj_14_10.jpg", "web_images/obj_14_11.jpg", "web_images/obj_14_12.jpg", "web_images/obj_14_13.jpg", "web_images/obj_14_14.jpg", "web_images/obj_14_15.jpg", "web_images/obj_14_16.jpg"], "total_original_photos": 16, "colors": {"dg": "green", "stellplatz": "red", "heizung": "amber", "eek": "amber", "zustand": "amber"}, "is_reh": false}, {"id": "15", "pair_ref": "Eindeutiger Treffer", "title": "Charmantes Reihenmittelhaus in Reutlingen-Voller Brunnen", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Voller Brunnen", "plz": "72760", "kaufpreis": 319000, "qm_preis": 3708, "wohnflaeche": 86.0, "grundstueck": 127.0, "baujahr": 1956, "baureihe": "1956er Bauprogramm", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse, unterkellert, Terrasse & Garten", "dachgeschoss": "Ausgebaut", "stellplatz": "Stellplatz vorhanden", "heizung": "Gas-Zentralheizung", "heizungsalter": "Modernisiert", "energieklasse": "B", "zustand": "Sehr gepflegt, energieeffizient (Klasse B)", "score": "8.8 / 10", "begruendung": "Exzellentes Vergleichsobjekt in Voller Brunnen (72760). Reduziert von 329.000 € auf 319.000 €. Entspricht Claude Zeile 27. 16 Originalfotos!", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["Claude"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 18 (Römerschanze Reihenhaus 275.000 €, 86 m², BJ 1957)", "duplicate_reason": "DIREKT-EXPOSÉ: Aus Claude Zeile 27. Voller Brunnen 86 m² Wfl., 127 m² Grund, reduziert auf 319.000 € (zuvor 329k). 16 Fotos im Album.", "direct_links": [["Immowelt: Original-Exposé 46ea959b (319.000 €)", "https://www.immowelt.de/expose/46ea959b-7975-4ac1-b196-8012465b57c0"]], "asset_key": "15", "gwg": {"cat": "Exakt gleicher GWG-Typ (1956er Baureihe)", "desc": "1956er GWG-Reihenmittelhaus Voller Brunnen, 86 m² Wfl. inkl. DG, 4 Zi., Stellplatz", "color": "green", "group": "gwg_exact"}, "price_eval": {"cat": "🟢 Fairer Preis für 1956er Mittelhaus", "desc": "319.000 € (3.708 €/m², reduziert von 329k) für 86 m² Mittelhaus (127 m² Grund) mit guter Energieklasse B.", "color": "green"}, "images": ["web_images/obj_15_01.jpg", "web_images/obj_15_02.jpg", "web_images/obj_15_03.jpg", "web_images/obj_15_04.jpg", "web_images/obj_15_05.jpg", "web_images/obj_15_06.jpg", "web_images/obj_15_07.jpg", "web_images/obj_15_08.jpg", "web_images/obj_15_09.jpg", "web_images/obj_15_10.jpg", "web_images/obj_15_11.jpg", "web_images/obj_15_12.jpg", "web_images/obj_15_13.jpg", "web_images/obj_15_14.jpg", "web_images/obj_15_15.jpg", "web_images/obj_15_16.jpg"], "total_original_photos": 16, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "green", "eek": "green", "zustand": "green"}, "is_reh": false}, {"id": "16", "pair_ref": "Eindeutiger Treffer (Live-Daten Nordstadt)", "title": "Gepflegtes Reihenmittelhaus in Reutlingen-Nordstadt (Frisch reduziert auf 319.000 €)", "typ": "Reihenmittelhaus (RMH)", "stadt": "Reutlingen", "stadtteil": "Nordstadt", "plz": "72760", "kaufpreis": 319000, "qm_preis": 3709, "wohnflaeche": 86.0, "grundstueck": 229.0, "baujahr": 1958, "baureihe": "1950er-Jahre Siedlungsbau Nordstadt", "zimmer": 4.0, "ebenen_keller": "Unterkellert, massiv", "dachgeschoss": "Ausgebaut", "stellplatz": "Öffentlicher Parkraum / Anwohner", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "G", "zustand": "Gepflegter Bestand", "score": "8.5 / 10", "begruendung": "Live-Treffer direkt aus dem verlinkten Immowelt-Nordstadt-Suchlink: 86 m² Wohnfläche, 229 m² Grundstück. Der Kaufpreis wurde frisch von 329.000 € auf 319.000 € gesenkt. 13 Originalfotos vorliegend.", "status": "Eindeutiger Treffer (Live-Daten aus Immowelt-Link)", "found_by": ["Claude", "antigravity"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 26 (Nordstadt RMH 86 m² / 229 m², ehemals 329.000 €, frisch reduziert auf 319.000 €)", "duplicate_reason": "EINZELTREFFER: Das Live-Angebot auf der verlinkten Nordstadt-Seite (Exposé 753708ea). Vormals bei Claude mit 329.000 € gelistet, nun um 10.000 € auf 319.000 € reduziert. Ersetzt die ungenauen Zwischeneinträge 16A/16B und 23.", "direct_links": [["Immowelt: Original-Exposé 753708ea (319.000 €)", "https://www.immowelt.de/expose/753708ea-c563-41f8-bf3a-d2dda2ea9fa4"]], "asset_key": "16", "gwg": {"cat": "Ähnliches GWG-Haus (1958er Siedlungsbau)", "desc": "1958er Siedlungs-Mittelhaus Nordstadt, 86 m² Wfl. inkl. DG, 229 m² Grund", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🟢 Solider Nordstadt-Vergleich", "desc": "319.000 € (3.709 €/m², reduziert von 329k) für 86 m² Mittelhaus mit 229 m² Grund (EEK G).", "color": "green"}, "images": ["web_images/obj_16_01.jpg", "web_images/obj_16_02.jpg", "web_images/obj_16_03.jpg", "web_images/obj_16_04.jpg", "web_images/obj_16_05.jpg", "web_images/obj_16_06.jpg", "web_images/obj_16_07.jpg", "web_images/obj_16_08.jpg", "web_images/obj_16_09.jpg", "web_images/obj_16_10.jpg", "web_images/obj_16_11.jpg", "web_images/obj_16_12.jpg", "web_images/obj_16_13.jpg"], "total_original_photos": 13, "colors": {"dg": "green", "stellplatz": "red", "heizung": "amber", "eek": "red", "zustand": "amber"}, "is_reh": false}, {"id": "17", "pair_ref": "Eindeutiger Treffer", "title": "Gepflegtes Reiheneckhaus mit Großgrundstück in Reutlingen-Burgholz", "typ": "Reiheneckhaus / Reihenendhaus", "stadt": "Reutlingen", "stadtteil": "Burgholz", "plz": "72766", "kaufpreis": 425000, "qm_preis": 4324, "wohnflaeche": 98.3, "grundstueck": 436.0, "baujahr": 1961, "baureihe": "1960er-Siedlungsbau", "zimmer": 5.0, "ebenen_keller": "2 Vollgeschosse, unterkellert, Terrasse, großer Garten", "dachgeschoss": "Ausgebaut", "stellplatz": "Garage vorhanden", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "F", "zustand": "Liebevoll gepflegt, großes Eckgrundstück", "score": "8.5 / 10", "begruendung": "Konkretes Reiheneckhaus in Reutlingen-Burgholz (72766) mit 436 m² Grund und Garage. Ersetzt die alte Mössingen-Sammelsuche. 42 Originalfotos vorhanden!", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["Claude"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 36 (Mössingen Reihenendhaus 275.000 €, 78,6 m² / 215 m²)", "duplicate_reason": "DIREKT-EXPOSÉ: Ersetzt die Mössingen-Sammelsuche durch ein konkretes Reiheneckhaus in Reutlingen-Burgholz mit 436 m² Grund, 98 m² Wfl. und 16 Fotos im Album.", "direct_links": [["Immowelt: Original-Exposé 6206091c (Burgholz, 425.000 €)", "https://www.immowelt.de/expose/6206091c-44b4-478a-a366-c5afb766ff8c"]], "asset_key": "17", "gwg": {"cat": "Ähnliches Siedlungs-Eckhaus (Großgrundstück)", "desc": "1961er Reiheneckhaus Burgholz, 98,3 m² Wfl. & 436 m² Eckgrundstück (vgl. unsere 374 m²!)", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🟡 Referenz für ~98 m² REH + Großgrundstück", "desc": "425.000 € (4.324 €/m²) in Burgholz (98,3 m² Wfl., 436 m² Eckgrundstück, EEK F). Belegt den hohen Wert großer Eckgrundstücke!", "color": "amber"}, "images": ["web_images/obj_17_01.jpg", "web_images/obj_17_02.jpg", "web_images/obj_17_03.jpg", "web_images/obj_17_04.jpg", "web_images/obj_17_05.jpg", "web_images/obj_17_06.jpg", "web_images/obj_17_07.jpg", "web_images/obj_17_08.jpg", "web_images/obj_17_09.jpg", "web_images/obj_17_10.jpg", "web_images/obj_17_11.jpg", "web_images/obj_17_12.jpg", "web_images/obj_17_13.jpg", "web_images/obj_17_14.jpg", "web_images/obj_17_15.jpg", "web_images/obj_17_16.jpg"], "total_original_photos": 16, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "amber", "zustand": "amber"}, "is_reh": true}, {"id": "18", "pair_ref": "Eindeutiger Treffer", "title": "Komplett renoviertes Reihenhaus in Pfullingen", "typ": "Reihenhaus / Reihenmittelhaus", "stadt": "Pfullingen", "stadtteil": "Zentrumsnah", "plz": "72793", "kaufpreis": 385000, "qm_preis": 4278, "wohnflaeche": 90.0, "grundstueck": 197.0, "baujahr": 1965, "baureihe": "1960er-Reihenhaus", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse, unterkellert, Terrasse & Garten", "dachgeschoss": "Ausgebaut", "stellplatz": "Stellplatz vorhanden", "heizung": "Zentralheizung neuwertig", "heizungsalter": "2023 modernisiert", "energieklasse": "F", "zustand": "Komplett renoviert (Elektrik, Leitungen, Bad neu)", "score": "8.7 / 10", "begruendung": "Konkretes, kernsaniertes Reihenhaus im direkten Nachbarort Pfullingen (72793). Provisionsfrei für 385.000 €. Ersetzt die Pfullingen-Sammelsuche. 22 Originalfotos!", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["antigravity"], "match_gpt": "–", "match_gemini": "–", "match_claude": "–", "duplicate_reason": "DIREKT-EXPOSÉ: Ersetzt die Pfullingen-Sammelsuche durch ein konkretes Objekt (90 m² Wfl., 197 m² Grund, 385.000 € provisionsfrei) mit 16 Fotos im Album.", "direct_links": [["Immowelt: Original-Exposé 8f2bcce9 (Pfullingen, 385.000 €)", "https://www.immowelt.de/expose/8f2bcce9-00b5-4c60-9556-a7716aef5807"]], "asset_key": "18", "gwg": {"cat": "Anderer Haustyp / Bauträger", "desc": "1965er Reihenhaus Pfullingen, 90 m² Wfl., kernsaniert, privater Bauträger", "color": "gray", "group": "other"}, "price_eval": {"cat": "🟡 Marktgerecht für Kernsanierung", "desc": "385.000 € (4.278 €/m²) provisionsfrei in Pfullingen (90 m²). Leitungen & Bad neu, sofort beziehbar.", "color": "amber"}, "images": ["web_images/obj_18_01.jpg", "web_images/obj_18_02.jpg", "web_images/obj_18_03.jpg", "web_images/obj_18_04.jpg", "web_images/obj_18_05.jpg", "web_images/obj_18_06.jpg", "web_images/obj_18_07.jpg", "web_images/obj_18_08.jpg", "web_images/obj_18_09.jpg", "web_images/obj_18_10.jpg", "web_images/obj_18_11.jpg", "web_images/obj_18_12.jpg", "web_images/obj_18_13.jpg", "web_images/obj_18_14.jpg", "web_images/obj_18_15.jpg", "web_images/obj_18_16.jpg"], "total_original_photos": 16, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "green", "eek": "amber", "zustand": "green"}, "is_reh": false}, {"id": "19", "pair_ref": "Eindeutiger Treffer", "title": "Großzügiges Reihenhaus in Kirchentellinsfurt (Tübingen-Umland)", "typ": "Reihenmittelhaus", "stadt": "Kirchentellinsfurt", "stadtteil": "Ruhige Wohnlage", "plz": "72138", "kaufpreis": 469000, "qm_preis": 2443, "wohnflaeche": 192.0, "grundstueck": 436.0, "baujahr": 1964, "baureihe": "1960er-Wohnbau", "zimmer": 7.0, "ebenen_keller": "3 Ebenen, voll unterkellert, Balkon, Terrasse, Garten", "dachgeschoss": "Voll ausgebaut", "stellplatz": "Garage & Stellplatz", "heizung": "Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "D", "zustand": "Gepflegt, sehr viel Platz", "score": "8.0 / 10", "begruendung": "Konkretes Reihenhaus direkt an der Stadtgrenze Tübingen (Kirchentellinsfurt, 72138). Reduziert auf 469.000 € (vormals 499k). Ersetzt die Tübingen-Sammelsuche. 20 Originalfotos!", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["antigravity"], "match_gpt": "–", "match_gemini": "–", "match_claude": "–", "duplicate_reason": "DIREKT-EXPOSÉ: Ersetzt die Tübingen-Sammelsuche durch ein konkretes Objekt im direkten Tübinger Nachbarort (192 m² Wfl., 436 m² Grund, 469.000 €) mit 16 Fotos im Album.", "direct_links": [["Immowelt: Original-Exposé 2434a8d2 (Kirchentellinsfurt, 469.000 €)", "https://www.immowelt.de/expose/2434a8d2-8b5d-4391-823b-baa31bb7c6da"]], "asset_key": "19", "gwg": {"cat": "Anderer Haustyp / Bauträger", "desc": "1964er Großreihenhaus Kirchentellinsfurt, 192 m² Wfl., 7 Zimmer", "color": "gray", "group": "other"}, "price_eval": {"cat": "🟢 Sehr günstiger m²-Preis (Großhaus)", "desc": "469.000 € (nur 2.443 €/m²!) bei 192 m² Wfl. Absoluter Preis jedoch andere Objektkategorie.", "color": "green"}, "images": ["web_images/obj_19_01.jpg", "web_images/obj_19_02.jpg", "web_images/obj_19_03.jpg", "web_images/obj_19_04.jpg", "web_images/obj_19_05.jpg", "web_images/obj_19_06.jpg", "web_images/obj_19_07.jpg", "web_images/obj_19_08.jpg", "web_images/obj_19_09.jpg", "web_images/obj_19_10.jpg", "web_images/obj_19_11.jpg", "web_images/obj_19_12.jpg", "web_images/obj_19_13.jpg", "web_images/obj_19_14.jpg", "web_images/obj_19_15.jpg", "web_images/obj_19_16.jpg"], "total_original_photos": 16, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "amber", "zustand": "amber"}, "is_reh": false}, {"id": "20", "pair_ref": "Eindeutiger Treffer", "title": "Reiheneckhaus mit neuer Heizung 2025 in Hülben", "typ": "Reiheneckhaus (REH)", "stadt": "Hülben", "stadtteil": "Ortsrand", "plz": "72534", "kaufpreis": "Preis a. A.", "qm_preis": "k. A.", "wohnflaeche": 95.0, "grundstueck": 280.0, "baujahr": 1958, "baureihe": "1958/59er Reiheneckhaus", "zimmer": 4.5, "ebenen_keller": "Unterkellert", "dachgeschoss": "Ausgebaut", "stellplatz": "Garage / Stellplatz", "heizung": "Zentralheizung", "heizungsalter": "NEU 2025!", "energieklasse": "Sehr gut durch neue Heizung 2025", "zustand": "Gepflegt, Heizung neu", "score": "8.5 / 10", "begruendung": "Perfekter technischer Vergleich für ein Eckhaus mit nagelneuer Heizung (2025)! 12 Fotos aus Expowand-Originalexposé vorhanden.", "status": "Eindeutiger Einzeltreffer", "found_by": ["Claude", "antigravity"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 35 (Hülben Reiheneckhaus 1958/59, neue Heizung 2025)", "duplicate_reason": "EINZELTREFFER: Expowand-Exposé PDF 19259 mit 12 extrahierten Originalbildern.", "direct_links": [["Expowand: PDF-Kurzexposé 19259 (12 Fotos)", "https://expowand.de/exposeShort/PDF/19259"]], "asset_key": "20", "gwg": {"cat": "Anderer Haustyp / Bauträger", "desc": "1958er Reiheneckhaus Hülben (Schwäbische Alb)", "color": "gray", "group": "other"}, "price_eval": {"cat": "⚪ Preis auf Anfrage", "desc": "Neue Zentralheizung 2025 ist ein starker Wertvorteil (ähnlich unserem 2 Jahre alten Brenner).", "color": "gray"}, "images": ["web_images/obj_20_01.jpg", "web_images/obj_20_02.jpg", "web_images/obj_20_03.jpg", "web_images/obj_20_04.jpg", "web_images/obj_20_05.jpg", "web_images/obj_20_06.jpg", "web_images/obj_20_07.jpg", "web_images/obj_20_08.jpg", "web_images/obj_20_09.jpg", "web_images/obj_20_10.jpg", "web_images/obj_20_11.jpg", "web_images/obj_20_12.jpg"], "total_original_photos": 12, "colors": {"dg": "green", "stellplatz": "green", "heizung": "green", "eek": "red", "zustand": "green"}, "is_reh": true}, {"id": "21", "pair_ref": "Eindeutiger Treffer", "title": "Provisionsfreies Reiheneckhaus BJ 1952 in Reutlingen-Betzingen", "typ": "Reiheneckhaus / Reihenendhaus", "stadt": "Reutlingen", "stadtteil": "Betzingen", "plz": "72770", "kaufpreis": 249000, "qm_preis": 3952, "wohnflaeche": 63.0, "grundstueck": 177.0, "baujahr": 1952, "baureihe": "1952er-Siedlungsbau", "zimmer": 3.0, "ebenen_keller": "2 Vollgeschosse, unterkellert, Garten", "dachgeschoss": "Ausgebaut", "stellplatz": "Stellplatz vorhanden", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "H", "zustand": "Charmant, modernisierungsbedürftig", "score": "8.6 / 10", "begruendung": "Konkretes 1952er Reiheneckhaus in Reutlingen-Betzingen. Provisionsfrei für 249.000 €. Entspricht dem günstigen Preissegment aus Claude Zeile 22. 11 Originalfotos!", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["Claude"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 21 (Römerschanze RMH 272.000 €, 78,5 m² / 161 m²)", "duplicate_reason": "DIREKT-EXPOSÉ: Ersetzt die Sammelsuche durch das reale 1952er Reiheneckhaus für 249.000 € (63 m² Wfl., 177 m² Grund, provisionsfrei) mit 11 Fotos im Album.", "direct_links": [["Immowelt: Original-Exposé 3d2e45c5 (Betzingen, 249.000 €)", "https://www.immowelt.de/expose/3d2e45c5-fd1a-47e0-94bf-73fc0fe316d9"]], "asset_key": "21", "gwg": {"cat": "Ähnliches GWG-Haus (1952er Kleintyp)", "desc": "1952er Reiheneckhaus Betzingen, 63 m² Wfl. / 177 m² Grund", "color": "blue", "group": "gwg_similar"}, "price_eval": {"cat": "🟢 Günstiges Kleinst-Eckhaus (63 m²)", "desc": "249.000 € (3.952 €/m²) provisionsfrei für sehr kleines 63 m² Eckhaus in Betzingen.", "color": "green"}, "images": ["web_images/obj_21_01.jpg", "web_images/obj_21_02.jpg", "web_images/obj_21_03.jpg", "web_images/obj_21_04.jpg", "web_images/obj_21_05.jpg", "web_images/obj_21_06.jpg", "web_images/obj_21_07.jpg", "web_images/obj_21_08.jpg", "web_images/obj_21_09.jpg", "web_images/obj_21_10.jpg", "web_images/obj_21_11.jpg"], "total_original_photos": 11, "colors": {"dg": "green", "stellplatz": "amber", "heizung": "amber", "eek": "red", "zustand": "amber"}, "is_reh": true}, {"id": "22", "pair_ref": "Eindeutiger Treffer", "title": "Reihenendhaus mit 403 m² Großgrundstück in Reutlingen-Orschel-Hagen", "typ": "Reihenendhaus / Reiheneckhaus", "stadt": "Reutlingen", "stadtteil": "Orschel-Hagen", "plz": "72760", "kaufpreis": 287000, "qm_preis": 3376, "wohnflaeche": 85.0, "grundstueck": 403.0, "baujahr": 1965, "baureihe": "1965er Bauprogramm Orschel-Hagen", "zimmer": 4.0, "ebenen_keller": "2 Vollgeschosse, unterkellert, große Glasfront zum Garten", "dachgeschoss": "Ausgebaut", "stellplatz": "Garage vorhanden", "heizung": "Gas-Zentralheizung", "heizungsalter": "Bestand", "energieklasse": "G", "zustand": "Gepflegt mit Sanierungspotenzial, großes Eckgrundstück", "score": "9.0 / 10", "begruendung": "Konkretes Reihenendhaus mit 403 m² Grund in Orschel-Hagen (72760). Reduziert auf 287.000 € (zuvor 319k / ursprünglich 348k bei Claude Zeile 25). 15 Originalfotos!", "status": "Eindeutiger Treffer (Live-Exposé Immowelt)", "found_by": ["Claude"], "match_gpt": "–", "match_gemini": "–", "match_claude": "Zeile 25 (Orschel-Hagen REH 348.000 €, 85 m² / 403 m² Grund)", "duplicate_reason": "DIREKT-EXPOSÉ: Aus Claude Zeile 25. Reales Reihenendhaus mit 403 m² Grundstück in Orschel-Hagen, reduziert auf 287.000 € (15 Fotos im Album).", "direct_links": [["Immowelt: Original-Exposé 4febd0f8 (Orschel-Hagen, 287.000 €)", "https://www.immowelt.de/expose/4febd0f8-6e44-4970-9ea7-10057b406c75"]], "asset_key": "22", "gwg": {"cat": "Anderer Haustyp (Eckhaus Großgrundstück)", "desc": "1965er Reihenendhaus Orschel-Hagen, 85 m² Wfl. mit 403 m² Eckgrundstück", "color": "gray", "group": "other"}, "price_eval": {"cat": "🟢 Eckhaus mit 403 m² Grund (Orschel-Hagen)", "desc": "287.000 € (3.376 €/m², gesenkt von 348k/319k) für 85 m² Wfl. und 403 m² Grund in Orschel-Hagen.", "color": "green"}, "images": ["web_images/obj_22_01.jpg", "web_images/obj_22_02.jpg", "web_images/obj_22_03.jpg", "web_images/obj_22_04.jpg", "web_images/obj_22_05.jpg", "web_images/obj_22_06.jpg", "web_images/obj_22_07.jpg", "web_images/obj_22_08.jpg", "web_images/obj_22_09.jpg", "web_images/obj_22_10.jpg", "web_images/obj_22_11.jpg", "web_images/obj_22_12.jpg", "web_images/obj_22_13.jpg", "web_images/obj_22_14.jpg", "web_images/obj_22_15.jpg"], "total_original_photos": 15, "colors": {"dg": "green", "stellplatz": "green", "heizung": "amber", "eek": "red", "zustand": "amber"}, "is_reh": true}];
+
+    const CAPTION_LABELS = [
+      "Straßenansicht / Fassade",
+      "Garten / Rückseite",
+      "Terrasse & Außenbereich",
+      "Wohnzimmer / Essbereich",
+      "Küche / Einbauküche",
+      "Schlafzimmer / Obergeschoss",
+      "Badezimmer / Sanitär",
+      "Eingang / Flur / Treppe",
+      "Keller / Heizungsanlage",
+      "Garage / Stellplatz",
+      "Grundriss / Plan",
+      "Weiterer Innenraum",
+      "Gartenansicht Detail",
+      "Dachgeschoss / Studio",
+      "Detailaufnahme",
+      "Umgebungsblick"
+    ];
+
+    let currentFilter = 'all';
+    let currentView = 'cards';
+    let cardImageIndex = {};
+    let lbObj = null;
+    let lbIndex = 0;
+
+    function fmtEuro(val) {
+      if (typeof val === 'number') {
+        return val.toLocaleString('de-DE') + ' €';
+      }
+      return val || 'Auf Anfrage';
+    }
+
+    function updateCalc() {
+      const wfl = parseInt(document.getElementById('inp-wfl').value, 10);
+      const cond = parseInt(document.getElementById('inp-cond').value, 10);
+      const buf = parseInt(document.getElementById('inp-buf').value, 10);
+
+      document.getElementById('lbl-wfl').textContent = wfl + ' m²' + (wfl === 96 ? ' (Richtwert Typ IIIa)' : '');
+      let condText = 'Solider Bestand (Standard)';
+      if (cond <= -25000) condText = 'Voller Sanierungsbedarf (' + (cond/1000) + 'k €)';
+      else if (cond < 0) condText = 'Erhöhter Modernisierungsbedarf (' + (cond/1000) + 'k €)';
+      else if (cond >= 20000) condText = 'Guter / teilsanierter Zustand (+' + (cond/1000) + 'k €)';
+      else if (cond > 0) condText = 'Gepflegte Gewerke (+' + (cond/1000) + 'k €)';
+      document.getElementById('lbl-cond').textContent = condText;
+
+      // Base value at 96 m² = 335,000 €; marginal m² value = 2,600 €/m² (since land 373.7 m² is fixed)
+      const baseFair = 335000 + (wfl - 96) * 2600 + cond;
+      const fairRounded = Math.round(baseFair / 1000) * 1000;
+      const askRounded = fairRounded + buf;
+      const qmVal = Math.round(fairRounded / wfl);
+      const pct = Math.round((buf / fairRounded) * 100);
+
+      document.getElementById('lbl-buf').textContent = '+' + buf.toLocaleString('de-DE') + ' € (~' + pct + ' %)';
+      document.getElementById('out-fair').textContent = fairRounded.toLocaleString('de-DE') + ' €';
+      document.getElementById('out-ask').textContent = askRounded.toLocaleString('de-DE') + (buf > 0 ? ' € VB' : ' €');
+      document.getElementById('out-qm').textContent = qmVal.toLocaleString('de-DE') + ' €/m²';
+    }
+
+    function setFilter(f, btn) {
+      currentFilter = f;
+      document.querySelectorAll('.f-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderAll();
+    }
+
+    function setView(v) {
+      currentView = v;
+      document.getElementById('btn-view-cards').classList.toggle('active', v === 'cards');
+      document.getElementById('btn-view-table').classList.toggle('active', v === 'table');
+      document.getElementById('cards-container').classList.toggle('hidden', v !== 'cards');
+      document.getElementById('table-container').classList.toggle('active', v === 'table');
+    }
+
+    function getFilteredAndSorted() {
+      const q = (document.getElementById('search-box').value || '').trim().toLowerCase();
+      const sortMode = document.getElementById('sort-box').value;
+
+      let list = PROPERTIES.filter(p => {
+        if (currentFilter === 'gwg_exact' && p.gwg.group !== 'gwg_exact') return false;
+        if (currentFilter === 'gwg_similar' && p.gwg.group !== 'gwg_similar') return false;
+        if (currentFilter === 'other' && p.gwg.group !== 'other') return false;
+        if (currentFilter === 'rt_72760' && p.plz !== '72760') return false;
+        if (currentFilter === 'reh_only' && !p.is_reh) return false;
+
+        if (q) {
+          const hay = [
+            p.id, p.title, p.stadtteil, p.stadt, p.plz, p.typ,
+            p.gwg.cat, p.gwg.desc, p.price_eval.cat, p.price_eval.desc,
+            p.heizung, p.stellplatz, p.zustand, p.dachgeschoss
+          ].join(' ').toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      list.sort((a, b) => {
+        if (sortMode === 'id_asc') return parseInt(a.id) - parseInt(b.id);
+        if (sortMode === 'gwg_first') {
+          const rank = { 'gwg_exact': 1, 'gwg_similar': 2, 'other': 3 };
+          if (rank[a.gwg.group] !== rank[b.gwg.group]) return rank[a.gwg.group] - rank[b.gwg.group];
+          return parseInt(a.id) - parseInt(b.id);
+        }
+        if (sortMode === 'price_asc') {
+          const pa = typeof a.kaufpreis === 'number' ? a.kaufpreis : 9999999;
+          const pb = typeof b.kaufpreis === 'number' ? b.kaufpreis : 9999999;
+          return pa - pb;
+        }
+        if (sortMode === 'price_desc') {
+          const pa = typeof a.kaufpreis === 'number' ? a.kaufpreis : 0;
+          const pb = typeof b.kaufpreis === 'number' ? b.kaufpreis : 0;
+          return pb - pa;
+        }
+        if (sortMode === 'qm_asc') {
+          const qa = typeof a.qm_preis === 'number' ? a.qm_preis : 99999;
+          const qb = typeof b.qm_preis === 'number' ? b.qm_preis : 99999;
+          return qa - qb;
+        }
+        if (sortMode === 'plot_desc') {
+          return (b.grundstueck || 0) - (a.grundstueck || 0);
+        }
+        return 0;
+      });
+
+      return list;
+    }
+
+    function cycleCardImg(event, oid, dir) {
+      event.stopPropagation();
+      const obj = PROPERTIES.find(x => String(x.id) === String(oid));
+      if (!obj || !obj.images.length) return;
+      const curr = cardImageIndex[oid] || 0;
+      const next = (curr + dir + obj.images.length) % obj.images.length;
+      setCardImg(event, oid, next);
+    }
+
+    function setCardImg(event, oid, idx) {
+      if (event) event.stopPropagation();
+      const obj = PROPERTIES.find(x => String(x.id) === String(oid));
+      if (!obj || !obj.images[idx]) return;
+      cardImageIndex[oid] = idx;
+      const imgEl = document.getElementById('card-img-' + oid);
+      if (imgEl) imgEl.src = obj.images[idx];
+      const cntEl = document.getElementById('card-cnt-' + oid);
+      if (cntEl) cntEl.textContent = `📸 Foto ${idx + 1} / ${obj.images.length} (Alle ansehen)`;
+      document.querySelectorAll(`.thumb-mini-${oid}`).forEach((el, i) => {
+        el.classList.toggle('active', i === idx);
+      });
+    }
+
+    function renderAll() {
+      const list = getFilteredAndSorted();
+      document.getElementById('results-count').textContent =
+        `Zeige ${list.length} von 22 Vergleichsobjekten (Tipp: Klick auf ein Bild öffnet alle Fotos in Großansicht)`;
+
+      // 1. Render Cards
+      const cardsHtml = list.map(p => {
+        const oid = p.id;
+        const currIdx = cardImageIndex[oid] || 0;
+        const heroSrc = p.images[currIdx] || '';
+        const wflDiff = Math.round((p.wohnflaeche || 0) - 96);
+        const plotDiff = Math.round((p.grundstueck || 0) - 374);
+        const wflStr = wflDiff >= 0 ? `+${wflDiff} m² Wfl.` : `${wflDiff} m² Wfl.`;
+        const plotStr = plotDiff >= 0 ? `+${plotDiff} m² Grund` : `${plotDiff} m² Grund`;
+
+        const thumbsHtml = p.images.slice(0, 5).map((src, i) => `
+          <div class="thumb-mini thumb-mini-${oid} ${i === currIdx ? 'active' : ''}" onclick="setCardImg(event, '${oid}', ${i})">
+            <img src="${src}" loading="lazy" alt="Vorschau ${i+1}" />
+          </div>
+        `).join('');
+
+        const linksHtml = (p.direct_links || []).map((dl, idx) => {
+          const label = dl[0].split(':')[0] || ('Exposé ' + (idx + 1));
+          return `<a href="${dl[1]}" target="_blank" rel="noopener" class="btn-link">🔗 ${label} ↗</a>`;
+        }).join('');
+
+        return `
+          <article class="prop-card">
+            <div class="prop-media" onclick="openLightbox('${oid}', cardImageIndex['${oid}'] || 0)">
+              <img id="card-img-${oid}" src="${heroSrc}" loading="lazy" alt="${p.title}" />
+              <span class="media-id-badge">ID ${p.id} · ${p.stadtteil}</span>
+              <button class="media-nav-btn media-nav-prev" onclick="cycleCardImg(event, '${oid}', -1)" title="Vorheriges Foto">❮</button>
+              <button class="media-nav-btn media-nav-next" onclick="cycleCardImg(event, '${oid}', 1)" title="Nächstes Foto">❯</button>
+              <span class="media-photo-count" id="card-cnt-${oid}">📸 Foto ${currIdx + 1} / ${p.images.length} (Alle ansehen)</span>
+            </div>
+
+            <div class="thumb-strip">${thumbsHtml}</div>
+
+            <div class="prop-body">
+              <div class="gwg-banner c-${p.gwg.color}">
+                <div><strong>${p.gwg.cat}</strong></div>
+                <div style="font-weight:500;font-size:0.74rem;margin-top:2px;">${p.gwg.desc}</div>
+              </div>
+
+              <div>
+                <h3 class="prop-title">${p.title}</h3>
+                <div class="prop-loc">📍 ${p.plz} ${p.stadt} (${p.stadtteil}) · ${p.typ} · BJ ${p.baujahr}</div>
+              </div>
+
+              <div class="metrics-row">
+                <div>
+                  <div class="m-lbl">Kaufpreis</div>
+                  <div class="m-val price-col">${fmtEuro(p.kaufpreis)}</div>
+                </div>
+                <div>
+                  <div class="m-lbl">€/m²</div>
+                  <div class="m-val">${typeof p.qm_preis === 'number' ? p.qm_preis.toLocaleString('de-DE') + ' €' : '–'}</div>
+                </div>
+                <div>
+                  <div class="m-lbl">Wohnfläche</div>
+                  <div class="m-val">${p.wohnflaeche} m²</div>
+                </div>
+                <div>
+                  <div class="m-lbl">Grundstück</div>
+                  <div class="m-val">${p.grundstueck} m²</div>
+                </div>
+              </div>
+
+              <div class="delta-bar">
+                ⚖️ <strong>Differenz zu Kronstädter Str. 29 (Ø 96 m² / 374 m²):</strong> ${wflStr} · ${plotStr}
+              </div>
+
+              <div class="price-eval-box c-${p.price_eval.color}">
+                <div><strong>${p.price_eval.cat}</strong></div>
+                <div style="margin-top:2px;">${p.price_eval.desc}</div>
+              </div>
+
+              <div class="ampel-grid">
+                <div class="ampel-item c-${p.colors.dg}">
+                  <span class="a-key">Dachgeschoss</span>
+                  <span class="a-val">${p.dachgeschoss}</span>
+                </div>
+                <div class="ampel-item c-${p.colors.stellplatz}">
+                  <span class="a-key">Stellplatz / Parken</span>
+                  <span class="a-val">${p.stellplatz}</span>
+                </div>
+                <div class="ampel-item c-${p.colors.heizung}">
+                  <span class="a-key">Heizung & Alter</span>
+                  <span class="a-val">${p.heizung} (${p.heizungsalter})</span>
+                </div>
+                <div class="ampel-item c-${p.colors.zustand}">
+                  <span class="a-key">Zustand & EEK (${p.energieklasse})</span>
+                  <span class="a-val">${p.zustand}</span>
+                </div>
+              </div>
+
+              <div class="prop-footer">
+                <button class="btn-gallery" onclick="openLightbox('${oid}', 0)">
+                  📸 Vollgalerie (${p.images.length} Fotos)
+                </button>
+                <div class="expose-links">${linksHtml}</div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+      document.getElementById('cards-container').innerHTML = cardsHtml;
+
+      // 2. Render PC Table
+      const omaRowHtml = `
+        <tr class="oma-table-row">
+          <td>⭐ OMA</td>
+          <td><span class="badge-pill badge-gold">Zielobjekt</span></td>
+          <td><strong>Kronstädter Straße 29</strong><br><span style="font-size:0.75rem;color:#78350f;">72760 Reutlingen (Römerschanze) · Flst. 7165</span></td>
+          <td>Reiheneckhaus (REH)</td>
+          <td><span class="tbl-badge c-green">⭐ GWG Reutlingen Typ IIIa<br>(20. Bauprogramm, ca. 1955/56)</span></td>
+          <td style="white-space:nowrap;color:#047857;font-size:0.9rem;"><strong>335.000 €</strong><br><span style="font-size:0.72rem;color:#78350f;">(295k – 375k €)</span></td>
+          <td><span class="tbl-badge c-amber">🎯 Richtwert: 335.000 €<br>Ziel: 325k–345k € | Start-VB: 359k €</span></td>
+          <td style="white-space:nowrap;"><strong>ca. 92–100 m²</strong></td>
+          <td style="white-space:nowrap;"><strong>373,71 m²</strong></td>
+          <td style="white-space:nowrap;">~3.490 €/m²</td>
+          <td>ca. 1955/56</td>
+          <td><span class="tbl-badge c-amber">Ausgebautes DG (einfach)</span></td>
+          <td><span class="tbl-badge c-green">Eigener Stellplatz auf Grundst.</span></td>
+          <td><span class="tbl-badge c-green">Gas-ZH · Brenner NEU (2 J.)</span></td>
+          <td><span class="tbl-badge c-gray">In Klärung</span></td>
+          <td><span class="tbl-badge c-amber">UG ohne Sockelbedarf; Fenster/Bad/Elektrik offen</span></td>
+          <td><span style="font-size:0.75rem;color:#78350f;">BRW: 390 €/m²<br>Bodenwert: 77.755 €</span></td>
+        </tr>
+      `;
+
+      const tableRowsHtml = list.map(p => {
+        const oid = p.id;
+        const thumbSrc = p.images[0] || '';
+        const linksHtml = (p.direct_links || []).map((dl, idx) => {
+          const label = dl[0].split(':')[0] || ('Link ' + (idx + 1));
+          return `<a href="${dl[1]}" target="_blank" rel="noopener" class="btn-link" style="display:inline-block;margin-top:4px;">🔗 ${label} ↗</a>`;
+        }).join(' ');
+
+        return `
+          <tr>
+            <td><strong>ID ${p.id}</strong></td>
+            <td>
+              <img src="${thumbSrc}" class="tbl-thumb" onclick="openLightbox('${oid}', 0)" title="Galerie öffnen (${p.images.length} Fotos)" />
+            </td>
+            <td>
+              <strong>${p.title}</strong><br>
+              <span style="color:#64748b;font-size:0.75rem;">${p.plz} ${p.stadt} (${p.stadtteil}) · ${p.zimmer} Zi.</span>
+            </td>
+            <td>${p.typ}</td>
+            <td><span class="tbl-badge c-${p.gwg.color}">${p.gwg.cat}<br><span style="font-weight:500;">${p.gwg.desc}</span></span></td>
+            <td style="white-space:nowrap;font-weight:800;color:#0f172a;">${fmtEuro(p.kaufpreis)}</td>
+            <td><span class="tbl-badge c-${p.price_eval.color}">${p.price_eval.cat}<br><span style="font-weight:500;">${p.price_eval.desc}</span></span></td>
+            <td style="white-space:nowrap;">${p.wohnflaeche} m²</td>
+            <td style="white-space:nowrap;font-weight:700;">${p.grundstueck} m²</td>
+            <td style="white-space:nowrap;font-weight:700;">${typeof p.qm_preis === 'number' ? p.qm_preis.toLocaleString('de-DE') + ' €/m²' : '–'}</td>
+            <td>${p.baujahr}</td>
+            <td><span class="tbl-badge c-${p.colors.dg}">${p.dachgeschoss}</span></td>
+            <td><span class="tbl-badge c-${p.colors.stellplatz}">${p.stellplatz}</span></td>
+            <td><span class="tbl-badge c-${p.colors.heizung}">${p.heizung}<br>(${p.heizungsalter})</span></td>
+            <td><span class="tbl-badge c-${p.colors.eek}">${p.energieklasse}</span></td>
+            <td><span class="tbl-badge c-${p.colors.zustand}">${p.zustand}</span></td>
+            <td>
+              <button class="btn-gallery" style="width:100%;justify-content:center;margin-bottom:4px;" onclick="openLightbox('${oid}', 0)">📸 ${p.images.length} Fotos</button>
+              ${linksHtml}
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      document.getElementById('table-body').innerHTML = omaRowHtml + tableRowsHtml;
+    }
+
+    /* LIGHTBOX LOGIC */
+    function openLightbox(oid, idx) {
+      const obj = PROPERTIES.find(x => String(x.id) === String(oid));
+      if (!obj || !obj.images.length) return;
+      lbObj = obj;
+      lbIndex = idx || 0;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      updateLightboxView();
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+      lbObj = null;
+    }
+
+    function stepLightbox(dir) {
+      if (!lbObj) return;
+      lbIndex = (lbIndex + dir + lbObj.images.length) % lbObj.images.length;
+      updateLightboxView();
+    }
+
+    function updateLightboxView() {
+      if (!lbObj) return;
+      const src = lbObj.images[lbIndex];
+      document.getElementById('lb-img').src = src;
+      document.getElementById('lb-title').textContent = `ID ${lbObj.id}: ${lbObj.title}`;
+      document.getElementById('lb-sub').textContent = `${lbObj.plz} ${lbObj.stadt} (${lbObj.stadtteil}) · ${fmtEuro(lbObj.kaufpreis)} · ${lbObj.wohnflaeche} m² Wfl. · ${lbObj.grundstueck} m² Grund`;
+      const capLabel = CAPTION_LABELS[lbIndex] || `Aufnahme ${lbIndex + 1}`;
+      document.getElementById('lb-caption').textContent = `Foto ${lbIndex + 1} von ${lbObj.images.length} — ${capLabel}`;
+
+      const thumbsHtml = lbObj.images.map((tSrc, i) => `
+        <img src="${tSrc}" class="lb-thumb ${i === lbIndex ? 'active' : ''}" onclick="lbIndex=${i};updateLightboxView();" alt="Thumb ${i+1}" />
+      `).join('');
+      document.getElementById('lb-thumbs').innerHTML = thumbsHtml;
+    }
+
+    // Keyboard & Swipe support for Lightbox
+    document.addEventListener('keydown', (e) => {
+      if (!lbObj) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') stepLightbox(1);
+      if (e.key === 'ArrowLeft') stepLightbox(-1);
+    });
+
+    let touchStartX = 0;
+    document.getElementById('lightbox').addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    document.getElementById('lightbox').addEventListener('touchend', (e) => {
+      if (!lbObj) return;
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 45) {
+        stepLightbox(diff < 0 ? 1 : -1);
+      }
+    }, {passive: true});
+
+    // Initial render
+    updateCalc();
+    renderAll();
+  </script>
+</body>
+</html>
